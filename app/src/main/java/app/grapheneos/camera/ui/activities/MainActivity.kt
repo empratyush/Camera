@@ -90,6 +90,7 @@ import app.grapheneos.camera.ui.SettingsDialog
 import app.grapheneos.camera.ui.seekbar.ExposureBar
 import app.grapheneos.camera.ui.seekbar.ZoomBar
 import app.grapheneos.camera.util.ImageResizer
+import app.grapheneos.camera.util.PrivacyToggleUtils
 import app.grapheneos.camera.util.executeIfAlive
 import app.grapheneos.camera.util.resolveActivity
 import com.google.android.material.imageview.ShapeableImageView
@@ -541,6 +542,10 @@ open class MainActivity : AppCompatActivity(),
             if (!isQRDialogShowing) {
                 camConfig.initializeCamera(true)
             }
+        }
+
+        if (camConfig.isVideoMode) {
+            showMicrophoneUnblockDialogIfRequired()
         }
     }
 
@@ -1039,6 +1044,15 @@ open class MainActivity : AppCompatActivity(),
 
     fun requestAudioPermission() {
         requestPermissionLauncher.launch(audioPermission)
+    }
+
+    fun showMicrophoneUnblockDialogIfRequired() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            val privacyToggleUtils = PrivacyToggleUtils(this)
+            if (privacyToggleUtils.isMicrophoneToggleOff()) {
+                privacyToggleUtils.showMicrophoneUnblockDialog()
+            }
+        }
     }
 
     private fun shareLatestMedia() {

@@ -1326,6 +1326,7 @@ class CamConfig(private val mActivity: MainActivity) {
 
             if (isVideoMode) {
                 mActivity.captureButton.setImageResource(R.drawable.recording)
+                mActivity.showMicrophoneUnblockDialogIfRequired()
             } else {
                 mActivity.captureButton.setImageResource(R.drawable.camera_shutter)
                 mActivity.micOffIcon.visibility = View.GONE
