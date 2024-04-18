@@ -1,0 +1,2117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.4.1" type="baseline" client="gradle" dependencies="false" name="AGP (8.4.1)" variant="all" version="8.4.1">
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                return String.format(&quot;%02d:%02d:%02d&quot;,"
+        errorLine2="                       ^">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4148"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="                String.format("
+        errorLine2="                ^">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/InAppGallery.kt"
+            line="311"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="        val text = String.format(&quot;%.1fx&quot;, zoomRatio)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/seekbar/ZoomBar.kt"
+            line="108"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-core than 1.4.0-alpha05 is available: 1.4.0-beta01"
+        errorLine1="    implementation(&quot;androidx.camera:camera-core:$cameraVersion&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="113"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-camera2 than 1.4.0-alpha05 is available: 1.4.0-beta01"
+        errorLine1="    implementation(&quot;androidx.camera:camera-camera2:$cameraVersion&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="114"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-lifecycle than 1.4.0-alpha05 is available: 1.4.0-beta01"
+        errorLine1="    implementation(&quot;androidx.camera:camera-lifecycle:$cameraVersion&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="115"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-video than 1.4.0-alpha05 is available: 1.4.0-beta01"
+        errorLine1="    implementation(&quot;androidx.camera:camera-video:$cameraVersion&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="116"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-view than 1.4.0-alpha05 is available: 1.4.0-beta01"
+        errorLine1="    implementation(&quot;androidx.camera:camera-view:$cameraVersion&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="117"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.camera:camera-extensions than 1.4.0-alpha05 is available: 1.4.0-beta01"
+        errorLine1="    implementation(&quot;androidx.camera:camera-extensions:$cameraVersion&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="118"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Activity should not be non-resizable. With this setting, apps cannot be used in multi-window or free form mode."
+        errorLine1="        android:resizeableActivity=&quot;false&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed."
+        errorLine1="            android:screenOrientation=&quot;nosensor&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="40"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed."
+        errorLine1="            android:screenOrientation=&quot;nosensor&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="71"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed."
+        errorLine1="            android:screenOrientation=&quot;nosensor&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="91"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed."
+        errorLine1="            android:screenOrientation=&quot;nosensor&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="109"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed."
+        errorLine1="            android:screenOrientation=&quot;nosensor&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="128"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed."
+        errorLine1="            android:screenOrientation=&quot;nosensor&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="149"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DiscouragedApi"
+        message="Should not restrict activity to fixed orientation. This may not be suitable for different form factors, causing the app to be letterboxed."
+        errorLine1="            android:screenOrientation=&quot;nosensor&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="193"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnsupportedChromeOsHardware"
+        message="Expecting `android:required=&quot;false&quot;` for this hardware feature that may not be supported by all Chrome OS devices"
+        errorLine1="    &lt;uses-feature android:name=&quot;android.hardware.camera.any&quot;/>"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="5"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21"
+        errorLine1="@RequiresApi(21) // TODO(b/200306659): Remove and replace with annotation on package-info.java"
+        errorLine2="~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/camera/core/impl/utils/Exif.java"
+            line="48"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 29"
+        errorLine1="        if (Build.VERSION.SDK_INT >= 21 &amp;&amp; isSeekableFD(fileDescriptor)) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="3972"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 29"
+        errorLine1="        if (Build.VERSION.SDK_INT >= 21) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4638"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 29"
+        errorLine1="                if (Build.VERSION.SDK_INT >= 21) {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4713"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 29"
+        errorLine1="                if (Build.VERSION.SDK_INT >= 21) {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4740"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 29"
+        errorLine1="                    if (Build.VERSION.SDK_INT >= 21) {"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4767"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 29"
+        errorLine1="                if (Build.VERSION.SDK_INT >= 21) {"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4888"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 29"
+        errorLine1="        if (Build.VERSION.SDK_INT >= 28) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="5858"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 29"
+        errorLine1="        if (Build.VERSION.SDK_INT >= 21) {"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterfaceUtils.java"
+            line="151"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 21"
+        errorLine1="    @RequiresApi(21)"
+        errorLine2="    ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterfaceUtils.java"
+            line="163"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="Unnecessary; SDK_INT is always >= 23"
+        errorLine1="    @RequiresApi(23)"
+        errorLine2="    ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterfaceUtils.java"
+            line="183"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="            &lt;LinearLayout"
+        errorLine2="             ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="623"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="LogConditional"
+        message="The log call Log.d(...) should be conditional: surround with `if (Log.isLoggable(...))` or `if (BuildConfig.DEBUG) { ... }`"
+        errorLine1="            Log.d(TAG, &quot;unable to collect MediaStore items, volume $volumeName&quot;, e)"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/CapturedItems.kt"
+            line="141"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="LogConditional"
+        message="The log call Log.d(...) should be conditional: surround with `if (Log.isLoggable(...))` or `if (BuildConfig.DEBUG) { ... }`"
+        errorLine1="            Log.d(TAG, &quot;The size of tag group[&quot; + i + &quot;]: &quot; + mAttributes[i].size());"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4655"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="LogConditional"
+        message="The log call Log.d(...) should be conditional: surround with `if (Log.isLoggable(...))` or `if (BuildConfig.DEBUG) { ... }`"
+        errorLine1="                Log.d(TAG, &quot;tagName: &quot; + entry.getKey() + &quot;, tagType: &quot; + tagValue.toString()"
+        errorLine2="                ^">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4658"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="LogConditional"
+        message="The log call Log.i(...) should be conditional: surround with `if (Log.isLoggable(...))` or `if (BuildConfig.DEBUG) { ... }`"
+        errorLine1="        Log.i(TAG, &quot;Selected location: ${data?.encodedPath!!}&quot;)"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/MainActivity.kt"
+            line="301"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogConditional"
+        message="The log call Log.i(...) should be conditional: surround with `if (Log.isLoggable(...))` or `if (BuildConfig.DEBUG) { ... }`"
+        errorLine1="        Log.i(TAG, &quot;onSwipeRight $i&quot;)"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/MainActivity.kt"
+            line="1454"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogConditional"
+        message="The log call Log.i(...) should be conditional: surround with `if (Log.isLoggable(...))` or `if (BuildConfig.DEBUG) { ... }`"
+        errorLine1="        Log.i(TAG, &quot;allowedFormats: ${camConfig.allowedFormats}&quot;)"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/analyzer/QRAnalyzer.kt"
+            line="39"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogConditional"
+        message="The log call Log.i(...) should be conditional: surround with `if (Log.isLoggable(...))` or `if (BuildConfig.DEBUG) { ... }`"
+        errorLine1="                Log.i(&quot;TAG&quot;, &quot;Unknown constant: $quality&quot;)"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/SettingsDialog.kt"
+            line="640"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="StringFormatTrivial"
+        message="This formatting string is trivial. Rather than using `String.format` to create your String, it will be more performant to concatenate your arguments with `+`. "
+        errorLine1="                        + String.format(&quot;latValue=%s, latRef=%s, lngValue=%s, lngRef=%s&quot;,"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="5087"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/system_neutral1_900` with a theme that also paints a background (inferred theme is `@style/Theme.App`)"
+        errorLine1="    android:background=&quot;@color/system_neutral1_900&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/gallery.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/system_neutral1_900` with a theme that also paints a background (inferred theme is `@style/OverlayActionBar`)"
+        errorLine1="    android:background=&quot;@color/system_neutral1_900&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/video_player.xml"
+            line="5"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.flash_mode` appears to be unused"
+        errorLine1="    &lt;string name=&quot;flash_mode&quot;>Flash Mode&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.edit_successfully` appears to be unused"
+        errorLine1="    &lt;string name=&quot;edit_successfully&quot;>Edit successful&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="107"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.image_processing_pending` appears to be unused"
+        errorLine1="    &lt;string name=&quot;image_processing_pending&quot;>Please wait for the last image to get processed…&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="127"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `enableAutoSleep` of class `App` requires synthetic accessor"
+        errorLine1="            activity?.enableAutoSleep()"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/App.kt"
+            line="56"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `imageProxyToBitmap` of class `CaptureActivity` requires synthetic accessor"
+        errorLine1="                    bitmap = imageProxyToBitmap(image, image.imageInfo.rotationDegrees.toFloat())"
+        errorLine2="                             ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/CaptureActivity.kt"
+            line="130"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `onTimerEnd` of class `CountDownTimerUI` requires synthetic accessor"
+        errorLine1="                onTimerEnd()"
+        errorLine2="                ~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/CountDownTimerUI.kt"
+            line="76"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `repositionTabLayout` of class `MainActivity` requires synthetic accessor"
+        errorLine1="                    repositionTabLayout()"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/MainActivity.kt"
+            line="972"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `obtainCamConfig` of class `Companion` requires synthetic accessor"
+        errorLine1="        val camConfig = obtainCamConfig(intent)"
+        errorLine2="                        ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/MoreSettings.kt"
+            line="75"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `getString` of class `SettingsDialog` requires synthetic accessor"
+        errorLine1="                                getString(R.string.unexpected_error_while_setting_focus_timeout)"
+        errorLine2="                                ~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/SettingsDialog.kt"
+            line="304"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `getString` of class `SettingsDialog` requires synthetic accessor"
+        errorLine1="                                getString(R.string.unexpected_error_while_setting_focus_timeout)"
+        errorLine2="                                ~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/SettingsDialog.kt"
+            line="304"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `prepareMediaPlayer` of class `TunePlayerKt` requires synthetic accessor"
+        errorLine1="        prepareMediaPlayer(context, R.raw.image_shot, { player -> shutterPlayer = player })"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/TunePlayer.kt"
+            line="31"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `prepareMediaPlayer` of class `TunePlayerKt` requires synthetic accessor"
+        errorLine1="        prepareMediaPlayer(context, R.raw.focus_start, { player -> fSPlayer = player })"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/TunePlayer.kt"
+            line="33"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `prepareMediaPlayer` of class `TunePlayerKt` requires synthetic accessor"
+        errorLine1="        prepareMediaPlayer(context, R.raw.timer_increment, { player -> tIPlayer = player })"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/TunePlayer.kt"
+            line="35"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `prepareMediaPlayer` of class `TunePlayerKt` requires synthetic accessor"
+        errorLine1="        prepareMediaPlayer(context, R.raw.timer_final_second, { player -> tCPlayer = player })"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/TunePlayer.kt"
+            line="36"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `prepareMediaPlayer` of class `TunePlayerKt` requires synthetic accessor"
+        errorLine1="        prepareMediaPlayer(context, R.raw.video_start, { player -> vRecPlayer = player })"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/TunePlayer.kt"
+            line="38"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SyntheticAccessor"
+        message="Access to `private` method `prepareMediaPlayer` of class `TunePlayerKt` requires synthetic accessor"
+        errorLine1="        prepareMediaPlayer(context, R.raw.video_stop, { player -> vStopPlayer = player })"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/TunePlayer.kt"
+            line="39"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.main_frame` appears to be unused"
+        errorLine1="            android:id=&quot;@+id/main_frame&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="18"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.preview_container` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/preview_container&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="23"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.qr_overlay` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/qr_overlay&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="37"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.bottom_overlay` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/bottom_overlay&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="58"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.g_circle_frame` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/g_circle_frame&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="68"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.g_circle` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/g_circle&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="74"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.g_circle_text` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/g_circle_text&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="84"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.g_circle_line_x` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/g_circle_line_x&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="97"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.g_circle_line_z` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/g_circle_line_z&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="106"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.g_circle_left_dash` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/g_circle_left_dash&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="120"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.g_circle_right_dash` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/g_circle_right_dash&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="131"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.c_timer` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/c_timer&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="141"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.preview_grid` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/preview_grid&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="152"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.main_overlay` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/main_overlay&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="157"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.flip_camera_circle` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/flip_camera_circle&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="177"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.flip_camera_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/flip_camera_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="186"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.capture_button` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/capture_button&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="226"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.capture_button_text` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/capture_button_text&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="246"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.capture_button_cross` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/capture_button_cross&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="256"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.mic_off` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/mic_off&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="265"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.third_option` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/third_option&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="277"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.image_preview` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/image_preview&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="294"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.third_circle` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/third_circle&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="304"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.preview_loading` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/preview_loading&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="313"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.zoom_in_icon` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/zoom_in_icon&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="344"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.zoom_bar` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/zoom_bar&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="353"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.zoom_out_icon` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/zoom_out_icon&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="359"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.exposure_bar_panel` appears to be unused"
+        errorLine1="            android:id=&quot;@+id/exposure_bar_panel&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="371"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.exposure_plus_icon` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/exposure_plus_icon&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="381"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.exposure_neg_icon` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/exposure_neg_icon&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="409"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.cancel_button` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/cancel_button&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="447"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.settings_option` appears to be unused"
+        errorLine1="            android:id=&quot;@+id/settings_option&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="456"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.qr_scan_toggles` appears to be unused"
+        errorLine1="            android:id=&quot;@+id/qr_scan_toggles&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="485"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.qr_scan_toggle` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/qr_scan_toggle&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="501"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.data_matrix_toggle` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/data_matrix_toggle&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="533"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.aztec_toggle` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/aztec_toggle&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="566"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.pdf417_toggle` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/pdf417_toggle&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="598"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.more_options` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/more_options&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="630"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.root_view` appears to be unused"
+        errorLine1="    android:id=&quot;@+id/root_view&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/gallery.xml"
+            line="4"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.gallery_slider` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/gallery_slider&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/gallery.xml"
+            line="10"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.placeholder_text` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/placeholder_text&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/gallery.xml"
+            line="17"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.play_button` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/play_button&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/gallery_slide.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.general_settings` appears to be unused"
+        errorLine1="            android:id=&quot;@+id/general_settings&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="19"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.gyroscope_setting` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/gyroscope_setting&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="35"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.gyroscope_setting_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/gyroscope_setting_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="48"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.gyroscope_setting_title` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/gyroscope_setting_title&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="64"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.gyroscope_setting_description` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/gyroscope_setting_description&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="74"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.gyroscope_setting_switch` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/gyroscope_setting_switch&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="85"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.camera_sounds_setting` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/camera_sounds_setting&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="94"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.camera_sounds_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/camera_sounds_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="107"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.camera_sounds_title` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/camera_sounds_title&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="123"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.camera_sounds_description` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/camera_sounds_description&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="133"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.camera_sounds_switch` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/camera_sounds_switch&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="144"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.photo_settings` appears to be unused"
+        errorLine1="            android:id=&quot;@+id/photo_settings&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="155"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.zsl_setting` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/zsl_setting&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="171"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.zsl_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/zsl_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="185"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.zsl_setting_title` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/zsl_setting_title&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="201"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.zsl_setting_subtitle` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/zsl_setting_subtitle&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="211"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.zsl_setting_toggle` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/zsl_setting_toggle&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="222"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.save_image_as_preview_setting` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/save_image_as_preview_setting&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="231"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.save_image_as_preview_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/save_image_as_preview_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="244"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.save_image_as_preview_title` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/save_image_as_preview_title&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="260"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.save_image_as_preview_subtitle` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/save_image_as_preview_subtitle&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="270"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.save_image_as_preview_toggle` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/save_image_as_preview_toggle&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="281"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.photo_quality_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/photo_quality_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="303"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.photo_quality_title` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/photo_quality_title&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="319"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.photo_quality_subtitle` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/photo_quality_subtitle&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="329"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.photo_quality` appears to be unused"
+        errorLine1="                            android:id=&quot;@+id/photo_quality&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="354"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.remove_exif_setting` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/remove_exif_setting&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="384"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.remove_exif_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/remove_exif_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="397"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.remove_exif_title` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/remove_exif_title&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="413"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.remove_exif_subtitle` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/remove_exif_subtitle&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="423"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.remove_exif_toggle` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/remove_exif_toggle&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="434"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.storage_location_settings` appears to be unused"
+        errorLine1="            android:id=&quot;@+id/storage_location_settings&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="445"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.storage_location_setting` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/storage_location_setting&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="461"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.storage_location_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/storage_location_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="474"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.storage_location_title` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/storage_location_title&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="490"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.storage_location_field` appears to be unused"
+        errorLine1="                            android:id=&quot;@+id/storage_location_field&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="505"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.refresh_storage_location` appears to be unused"
+        errorLine1="                            android:id=&quot;@+id/refresh_storage_location&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="520"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.image_format_setting` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/image_format_setting&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="534"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.image_format_setting_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/image_format_setting_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="548"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.image_format_setting_field` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/image_format_setting_field&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="574"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.video_format_setting` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/video_format_setting&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="591"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.video_format_setting_icon` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/video_format_setting_icon&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="605"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.video_format_setting_field` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/video_format_setting_field&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="631"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.copy_qr_text` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/copy_qr_text&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/scan_result_dialog.xml"
+            line="33"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.share_qr_text` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/share_qr_text&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/scan_result_dialog.xml"
+            line="48"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.encoding_tabs` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/encoding_tabs&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/scan_result_dialog.xml"
+            line="66"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.scan_result_text` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/scan_result_text&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/scan_result_dialog.xml"
+            line="72"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.settings_frame` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/settings_frame&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.location_toggle` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/location_toggle&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="45"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.aspect_ratio_toggle` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/aspect_ratio_toggle&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="65"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.torch_toggle_option` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/torch_toggle_option&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="86"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.flash_toggle_option` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/flash_toggle_option&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="105"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.grid_toggle_option` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/grid_toggle_option&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="120"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.settings_scrollview` appears to be unused"
+        errorLine1="                android:id=&quot;@+id/settings_scrollview&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="140"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.settings_scrollview_content` appears to be unused"
+        errorLine1="                    android:id=&quot;@+id/settings_scrollview_content&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="145"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.self_illumination_setting` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/self_illumination_setting&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="152"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.self_illumination_switch` appears to be unused"
+        errorLine1="                            android:id=&quot;@+id/self_illumination_switch&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="166"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.video_quality_setting` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/video_quality_setting&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="175"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.video_quality_spinner` appears to be unused"
+        errorLine1="                                android:id=&quot;@+id/video_quality_spinner&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="196"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.include_audio_setting` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/include_audio_setting&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="208"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.include_audio_switch` appears to be unused"
+        errorLine1="                            android:id=&quot;@+id/include_audio_switch&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="222"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.enable_eis_setting` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/enable_eis_setting&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="231"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.enable_eis_switch` appears to be unused"
+        errorLine1="                            android:id=&quot;@+id/enable_eis_switch&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="245"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.cm_radio_group` appears to be unused"
+        errorLine1="                            android:id=&quot;@+id/cm_radio_group&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="269"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.focus_timeout_spinner` appears to be unused"
+        errorLine1="                                android:id=&quot;@+id/focus_timeout_spinner&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="321"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.timer_setting` appears to be unused"
+        errorLine1="                        android:id=&quot;@+id/timer_setting&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="334"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.timer_spinner` appears to be unused"
+        errorLine1="                                android:id=&quot;@+id/timer_spinner&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="355"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.more_settings` appears to be unused"
+        errorLine1="            android:id=&quot;@+id/more_settings&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="373"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedIds"
+        message="The resource `R.id.video_player` appears to be unused"
+        errorLine1="        android:id=&quot;@+id/video_player&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/video_player.xml"
+            line="10"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="DuplicateStrings"
+        message="Duplicate string value `Are you sure?`, used in `are_you_sure` and `delete_title`"
+        errorLine1="    &lt;string name=&quot;delete_title&quot;>Are you sure?&lt;/string>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="114"
+            column="5"/>
+        <location
+            file="src/main/res/values/strings.xml"
+            line="146"
+            column="5"
+            message="Duplicates value in `delete_title`"/>
+    </issue>
+
+    <issue
+        id="TypographyQuotes"
+        message="Replace apostrophe (&apos;) with typographic apostrophe (’, &amp;#8217;) ?"
+        errorLine1="    &lt;string name=&quot;unsupported_taking_picture_while_recording&quot;>Your device doesn\&apos;t support taking pictures while recording video with the current settings.&lt;/string>"
+        errorLine2="                                                                                ~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="126"
+            column="81"/>
+    </issue>
+
+    <issue
+        id="TypographyQuotes"
+        message="Replace apostrophe (&apos;) with typographic apostrophe (’, &amp;#8217;) ?"
+        errorLine1="    &lt;string name=&quot;location_unavailable&quot;>Couldn\&apos;t attach location to image/video since it\&apos;s  currently unavailable&lt;/string>"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="128"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="TypographyQuotes"
+        message="Replace apostrophe (&apos;) with typographic apostrophe (’, &amp;#8217;) ?"
+        errorLine1="    &lt;string name=&quot;toggle_geo_tagging_unsupported_while_recording&quot;>Can\&apos;t toggle geo-tagging for ongoing recording&lt;/string>"
+        errorLine2="                                                                      ~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="138"
+            column="71"/>
+    </issue>
+
+    <issue
+        id="TypographyQuotes"
+        message="Replace apostrophe (&apos;) with typographic apostrophe (’, &amp;#8217;) ?"
+        errorLine1="    &lt;string name=&quot;image_taken_in_this_mode_does_not_contain_extra_data&quot;>Images taken in this mode don\&apos;t contain extra EXIF data&lt;/string>"
+        errorLine2="                                                                                                      ~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="152"
+            column="103"/>
+    </issue>
+
+    <issue
+        id="TypographyQuotes"
+        message="Replace apostrophe (&apos;) with typographic apostrophe (’, &amp;#8217;) ?"
+        errorLine1="    &lt;string name=&quot;couldnt_exclude_qr_format&quot;>Couldn\&apos;t exclude %s format. Please ensure at least one format is selected in manual mode.&lt;/string>"
+        errorLine2="                                                    ~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="155"
+            column="53"/>
+    </issue>
+
+    <issue
+        id="ConvertToWebp"
+        message="One or more images in this project can be converted to the WebP format which typically results in smaller file sizes, even for lossless conversion">
+        <location
+            file="src/main/res/drawable-nodpi/qr_code.png"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="                    &lt;TextView"
+        errorLine2="                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="83"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="                &lt;TextView"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="245"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="SelectableText"
+        message="Consider making the text value selectable by specifying `android:textIsSelectable=&quot;true&quot;`"
+        errorLine1="    &lt;TextView"
+        errorLine2="     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/zoom_bar_thumb.xml"
+            line="8"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="LabelFor"
+        message="Missing accessibility label: provide either a view with an `android:labelFor` that references this view or provide an `android:hint`"
+        errorLine1="                        &lt;EditText"
+        errorLine2="                         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/more_settings.xml"
+            line="353"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="RelativeOverlap"
+        message="`@id/cm_radio_group` can overlap `TextView-1` if @string/optimize_for, @id/cm_radio_group grow due to localized text expansion"
+        errorLine1="                        &lt;RadioGroup"
+        errorLine2="                         ~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/settings.xml"
+            line="268"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Should explicitly declare type here since implicit type does not specify nullness"
+        errorLine1="            val VIDEO_QUALITY = Quality.HIGHEST"
+        errorLine2="                ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/CamConfig.kt"
+            line="123"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Unknown nullability; explicitly declare as `@Nullable` or `@NonNull` to improve Kotlin interoperability; see https://developer.android.com/kotlin/interop#nullability_annotations"
+        errorLine1="    public ExifInterface getExifInterface() {"
+        errorLine2="           ~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/camera/core/impl/utils/Exif.java"
+            line="894"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Unknown nullability; explicitly declare as `@Nullable` or `@NonNull` to improve Kotlin interoperability; see https://developer.android.com/kotlin/interop#nullability_annotations"
+        errorLine1="    public void saveAttributes(InputStream original, OutputStream out) throws IOException {"
+        errorLine2="                               ~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4794"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Unknown nullability; explicitly declare as `@Nullable` or `@NonNull` to improve Kotlin interoperability; see https://developer.android.com/kotlin/interop#nullability_annotations"
+        errorLine1="    public void saveAttributes(InputStream original, OutputStream out) throws IOException {"
+        errorLine2="                                                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="4794"
+            column="54"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Unknown nullability; explicitly declare as `@Nullable` or `@NonNull` to improve Kotlin interoperability; see https://developer.android.com/kotlin/interop#nullability_annotations"
+        errorLine1="    public boolean getLatLong(float output[]) {"
+        errorLine2="                              ~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="5055"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Unknown nullability; explicitly declare as `@Nullable` or `@NonNull` to improve Kotlin interoperability; see https://developer.android.com/kotlin/interop#nullability_annotations"
+        errorLine1="    public void setGpsInfo(Location location) {"
+        errorLine2="                           ~~~~~~~~">
+        <location
+            file="src/main/java/androidxc/exifinterface/media/ExifInterface.java"
+            line="5100"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Should explicitly declare type here since implicit type does not specify nullness"
+        errorLine1="    val contentResolver = appContext.contentResolver"
+        errorLine2="        ~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/capturer/ImageSaver.kt"
+            line="73"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Should explicitly declare type here since implicit type does not specify nullness"
+        errorLine1="    val mainThreadExecutor = appContext.mainExecutor"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/capturer/ImageSaver.kt"
+            line="74"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Should explicitly declare type here since implicit type does not specify nullness"
+        errorLine1="        val imageCaptureCallbackExecutor = Executors.newSingleThreadExecutor()"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/capturer/ImageSaver.kt"
+            line="337"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Should explicitly declare type here since implicit type does not specify nullness"
+        errorLine1="    val asyncLoaderOfCapturedItems = Executors.newSingleThreadExecutor()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/InAppGallery.kt"
+            line="56"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Should explicitly declare type here since implicit type does not specify nullness"
+        errorLine1="    val asyncImageLoader = Executors.newSingleThreadExecutor()"
+        errorLine2="        ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/InAppGallery.kt"
+            line="57"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Should explicitly declare type here since implicit type does not specify nullness"
+        errorLine1="    val thumbnailLoaderExecutor = Executors.newSingleThreadExecutor()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/MainActivity.kt"
+            line="206"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UnknownNullness"
+        message="Should explicitly declare type here since implicit type does not specify nullness (ActivityResultLauncher&lt;(Intent..Intent?)>)"
+        errorLine1="    var dirPicker = registerForActivityResult(ActivityResultContracts.StartActivityForResult())"
+        errorLine2="        ~~~~~~~~~">
+        <location
+            file="src/main/java/app/grapheneos/camera/ui/activities/MainActivity.kt"
+            line="287"
+            column="9"/>
+    </issue>
+
+</issues>

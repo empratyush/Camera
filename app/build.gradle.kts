@@ -86,7 +86,10 @@ android {
     }
 
     lint {
-        disable += setOf("LintError")
+        baseline = file("lint-baseline.xml")
+        abortOnError = true
+        checkAllWarnings = true
+        warningsAsErrors = true
     }
 }
 
