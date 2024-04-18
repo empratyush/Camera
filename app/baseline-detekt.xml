@@ -1,0 +1,577 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>AnnotationOnSeparateLine:CamConfig.kt$CamConfig$@Suppress("DEPRECATION") mActivity.windowManager.defaultDisplay.rotation</ID>
+    <ID>AnnotationOnSeparateLine:MainActivity.kt$MainActivity$@Suppress("DEPRECATION") windowManager.defaultDisplay.rotation</ID>
+    <ID>ArgumentListWrapping:CamConfig.kt$CamConfig$( ResolutionSelector.Builder().setResolutionStrategy(strategy).build())</ID>
+    <ID>ArgumentListWrapping:CamConfig.kt$CamConfig$( aspectRatio, AspectRatioStrategy.FALLBACK_RULE_AUTO )</ID>
+    <ID>ArgumentListWrapping:CamConfig.kt$CamConfig$(Size(960, 960), ResolutionStrategy.FALLBACK_RULE_CLOSEST_HIGHER_THEN_LOWER)</ID>
+    <ID>ArgumentListWrapping:CapturedItems.kt$CapturedItems$(DocumentsContract.Document.COLUMN_DOCUMENT_ID, DocumentsContract.Document.COLUMN_DISPLAY_NAME)</ID>
+    <ID>ArgumentListWrapping:CustomGrid.kt$CustomGrid$( 0f, previewHeight / seed * 2f, width.toFloat(), previewHeight / seed * 2f, paint )</ID>
+    <ID>ArgumentListWrapping:CustomGrid.kt$CustomGrid$( 0f, previewHeight / seed * 3f, width.toFloat(), previewHeight / seed * 3f, paint )</ID>
+    <ID>ArgumentListWrapping:ExposureBar.kt$ExposureBar$( mainActivity.window.decorView.rootView as ViewGroup, transition )</ID>
+    <ID>ArgumentListWrapping:ImageCapturer.kt$ImageCapturer$(channelId, mActivity.getString(R.string.unable_to_save_image), NotificationManager.IMPORTANCE_HIGH)</ID>
+    <ID>ArgumentListWrapping:ImageSaver.kt$ImageSaver$( "cropJpegByteArray", ByteArray::class.java, Rect::class.java, Int::class.javaPrimitiveType)</ID>
+    <ID>ArgumentListWrapping:ImageSaver.kt$ImageSaver$(origJpegBytes!!.size + // make sure buffer doesn't need to be resized due to additional EXIF attributes (100 * 1024))</ID>
+    <ID>ArgumentListWrapping:InAppGallery.kt$InAppGallery$( intent, INTENT_KEY_LIST_OF_SECURE_MODE_CAPTURED_ITEMS)</ID>
+    <ID>ArgumentListWrapping:InAppGallery.kt$InAppGallery.Companion$( if (offset == null) { "yyyy:MM:dd HH:mm:ss" } else { "yyyy:MM:dd HH:mm:ss Z" }, Locale.US )</ID>
+    <ID>ArgumentListWrapping:MainActivity.kt$MainActivity$( "package", packageName, null )</ID>
+    <ID>ArgumentListWrapping:MainActivity.kt$MainActivity$( contentResolver, Settings.Global.ANIMATOR_DURATION_SCALE, 1f )</ID>
+    <ID>ArgumentListWrapping:MainActivity.kt$MainActivity$( contentResolver, Settings.Global.TRANSITION_ANIMATION_SCALE, 1f )</ID>
+    <ID>ArgumentListWrapping:MainActivity.kt$MainActivity$( object : ViewTreeObserver.OnGlobalLayoutListener { override fun onGlobalLayout() { rootView.viewTreeObserver.removeOnGlobalLayoutListener(this) val displayCutout = window.decorView.rootWindowInsets.displayCutout val layoutParams = (settingsIcon.layoutParams as RelativeLayout.LayoutParams) val rect = if (displayCutout?.boundingRects?.isNotEmpty() == true) displayCutout.boundingRects.first() else null val windowsSize = if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.R) { windowManager.currentWindowMetrics.bounds } else { val size = Point() // defaultDisplay isn't deprecated below API 30 as highlighted by the IDE // and this code would only execute if it is (Hint: enclosing if-block) @Suppress("DEPRECATION") windowManager.defaultDisplay.getRealSize(size) Rect(0, 0, size.x, size.y) } if (rect == null || rect.left &lt;= 0 || rect.right == windowsSize.right) { layoutParams.addRule(RelativeLayout.CENTER_HORIZONTAL) } else { layoutParams.addRule(RelativeLayout.ALIGN_PARENT_LEFT) } } })</ID>
+    <ID>ArgumentListWrapping:MainActivity.kt$MainActivity$( object : ViewTreeObserver.OnPreDrawListener { override fun onPreDraw(): Boolean { tabLayout.viewTreeObserver .removeOnPreDrawListener( this ) val previewHeight169 = previewContainer.width * 16 / 9 val extraHeight169 = previewContainer.height - previewHeight169 - tabLayout.height - 10 * resources.displayMetrics.density.toInt() tabLayout.layoutParams = (tabLayout.layoutParams as ViewGroup.MarginLayoutParams).let { it.setMargins( it.leftMargin, it.topMargin, it.rightMargin, if (extraHeight169 &gt; 0) { extraHeight169 } else { it.bottomMargin } ) it } return true } })</ID>
+    <ID>ArgumentListWrapping:MainActivity.kt$MainActivity$( previewView.width / 2.0f, previewView.height / 2.0f, QROverlay.RATIO )</ID>
+    <ID>ArgumentListWrapping:MainActivity.kt$MainActivity$( previewView.width.toFloat(), previewView.height.toFloat() )</ID>
+    <ID>ArgumentListWrapping:MainActivity.kt$MainActivity$(getString(R.string.location_is_disabled), if (this !is SecureMainActivity) getString(R.string.enable) else null )</ID>
+    <ID>ArgumentListWrapping:MoreSettings.kt$MoreSettings$(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)</ID>
+    <ID>ArgumentListWrapping:NumInputFilter.kt$NumInputFilter$( R.string.photo_quality_number_limit, min, max)</ID>
+    <ID>ArgumentListWrapping:QRAnalyzer.kt$QRAnalyzer$( imageData, plane.rowStride, image.height, left.roundToInt(), top.roundToInt(), size.roundToInt(), size.roundToInt(), false )</ID>
+    <ID>ArgumentListWrapping:QRToggle.kt$QRToggle$( R.string.couldnt_exclude_qr_format, key )</ID>
+    <ID>ArgumentListWrapping:SettingsDialog.kt$SettingsDialog$(CameraCharacteristics .CONTROL_AVAILABLE_VIDEO_STABILIZATION_MODES)</ID>
+    <ID>ArgumentListWrapping:SystemSettingsObserver.kt$SystemSettingsObserver$( Settings.System.getUriFor(key), notifyForDescendants, this )</ID>
+    <ID>ArgumentListWrapping:ZoomBar.kt$ZoomBar$( mainActivity.window.decorView.rootView as ViewGroup, transition )</ID>
+    <ID>ArgumentListWrapping:ZoomableImageView.kt$ZoomableImageView$( deltaX, currentInstance.viewWidth.toFloat(), currentInstance.origWidth * currentInstance.saveScale )</ID>
+    <ID>ArgumentListWrapping:ZoomableImageView.kt$ZoomableImageView$( deltaY, currentInstance.viewHeight.toFloat(), currentInstance.origHeight * currentInstance.saveScale )</ID>
+    <ID>ArgumentListWrapping:ZoomableImageView.kt$ZoomableImageView$( transY, viewHeight.toFloat(), origHeight * saveScale )</ID>
+    <ID>ArgumentListWrapping:ZoomableImageView.kt$ZoomableImageView.ScaleListener$( mScaleFactor, mScaleFactor, detector.focusX, detector.focusY )</ID>
+    <ID>ArgumentListWrapping:ZoomableImageView.kt$ZoomableImageView.ScaleListener$( mScaleFactor, mScaleFactor, viewWidth / 2f, viewHeight / 2f )</ID>
+    <ID>BracesOnIfStatements:BottomTabLayout.kt$BottomTabLayout$if</ID>
+    <ID>BracesOnIfStatements:CamConfig.kt$CamConfig$else</ID>
+    <ID>BracesOnIfStatements:CamConfig.kt$CamConfig$if</ID>
+    <ID>BracesOnIfStatements:CameraControl.kt$CameraControl$else</ID>
+    <ID>BracesOnIfStatements:CameraControl.kt$CameraControl$if</ID>
+    <ID>BracesOnIfStatements:CaptureActivity.kt$CaptureActivity$if</ID>
+    <ID>BracesOnIfStatements:CapturedItems.kt$CapturedItem$if</ID>
+    <ID>BracesOnIfStatements:ExifHelper.kt$if</ID>
+    <ID>BracesOnIfStatements:MainActivity.kt$MainActivity$if</ID>
+    <ID>BracesOnIfStatements:MainActivity.kt$MainActivity.&lt;no name provided&gt;$else</ID>
+    <ID>BracesOnIfStatements:MainActivity.kt$MainActivity.&lt;no name provided&gt;$if</ID>
+    <ID>BracesOnIfStatements:MoreSettings.kt$MoreSettings$else</ID>
+    <ID>BracesOnIfStatements:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier$else</ID>
+    <ID>BracesOnIfStatements:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier$if</ID>
+    <ID>BracesOnIfStatements:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$if</ID>
+    <ID>BracesOnIfStatements:SettingsDialog.kt$SettingsDialog$if</ID>
+    <ID>BracesOnIfStatements:ZoomableImageView.kt$ZoomableImageView$else</ID>
+    <ID>BracesOnIfStatements:ZoomableImageView.kt$ZoomableImageView$if</ID>
+    <ID>BracesOnIfStatements:ZoomableImageView.kt$ZoomableImageView.ScaleListener$else</ID>
+    <ID>BracesOnIfStatements:ZoomableImageView.kt$ZoomableImageView.ScaleListener$if</ID>
+    <ID>BracesOnWhenStatements:CamConfig.kt$CamConfig$when</ID>
+    <ID>BracesOnWhenStatements:InAppGallery.kt$InAppGallery$when</ID>
+    <ID>BracesOnWhenStatements:SettingsDialog.kt$SettingsDialog$when</ID>
+    <ID>BracesOnWhenStatements:ZoomableImageView.kt$ZoomableImageView$when</ID>
+    <ID>CascadingCallWrapping:MainActivity.kt$MainActivity$remove(this)</ID>
+    <ID>CascadingCallWrapping:MainActivity.kt$MainActivity$start()</ID>
+    <ID>ChainWrapping:CamConfig.kt$CamConfig$&amp;&amp;</ID>
+    <ID>ChainWrapping:CapturedItems.kt$CapturedItems$||</ID>
+    <ID>ChainWrapping:ExposureBar.kt$ExposureBar$/</ID>
+    <ID>ChainWrapping:ImageCapturer.kt$ImageCapturer$&amp;&amp;</ID>
+    <ID>ChainWrapping:MainActivity.kt$MainActivity$||</ID>
+    <ID>ChainWrapping:ZoomableImageView.kt$ZoomableImageView.ScaleListener$||</ID>
+    <ID>ClassOrdering:CamConfig.kt$CamConfig$Companion</ID>
+    <ID>ClassOrdering:CamConfig.kt$CamConfig$fun fetchLastCapturedItemFromSharedPrefs()</ID>
+    <ID>ClassOrdering:CamConfig.kt$CamConfig$fun shouldShowGyroscope(): Boolean</ID>
+    <ID>ClassOrdering:CamConfig.kt$CamConfig$var emphasisQuality: Boolean get() { return commonPref.getBoolean( SettingValues.Key.EMPHASIS_ON_QUALITY, SettingValues.Default.EMPHASIS_ON_QUALITY ) } set(value) { commonPref.edit { putBoolean(SettingValues.Key.EMPHASIS_ON_QUALITY, value) } }</ID>
+    <ID>ClassOrdering:CamConfig.kt$CamConfig$var requireLocation: Boolean = false get() { return mActivity.settingsDialog.locToggle.isChecked } set(value) { mActivity.locationCamConfigChanged(value) modePref.edit { putBoolean(SettingValues.Key.GEO_TAGGING, value) } mActivity.settingsDialog.locToggle.isChecked = value field = value }</ID>
+    <ID>ClassOrdering:CamConfig.kt$CamConfig$var selfIlluminate: Boolean get() { return modePref.getBoolean( SettingValues.Key.SELF_ILLUMINATION, SettingValues.Default.SELF_ILLUMINATION ) &amp;&amp; lensFacing == CameraSelector.LENS_FACING_FRONT } set(value) { modePref.edit { putBoolean(SettingValues.Key.SELF_ILLUMINATION, value) } mActivity.settingsDialog.selfIlluminationToggle.isChecked = value mActivity.settingsDialog.selfIllumination() }</ID>
+    <ID>ClassOrdering:CapturedItems.kt$CapturedItem$override fun describeContents()</ID>
+    <ID>ClassOrdering:CapturedItems.kt$CapturedItems$const val SAF_TREE_SEPARATOR = "\u0000"</ID>
+    <ID>ClassOrdering:CountDownTimerUI.kt$CountDownTimerUI$Companion</ID>
+    <ID>ClassOrdering:CountDownTimerUI.kt$CountDownTimerUI$init { gravity = Gravity.CENTER }</ID>
+    <ID>ClassOrdering:CustomGrid.kt$CustomGrid$init { paint.isAntiAlias = true paint.strokeWidth = 1f paint.style = Paint.Style.STROKE paint.color = Color.argb(255, 255, 255, 255) }</ID>
+    <ID>ClassOrdering:ExposureBar.kt$ExposureBar$Companion</ID>
+    <ID>ClassOrdering:ExposureBar.kt$ExposureBar$constructor(context: Context) : super(context)</ID>
+    <ID>ClassOrdering:ExposureBar.kt$ExposureBar$constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)</ID>
+    <ID>ClassOrdering:ExposureBar.kt$ExposureBar$constructor(context: Context, attrs: AttributeSet?, defStyle: Int) : super( context, attrs, defStyle )</ID>
+    <ID>ClassOrdering:GSlideTransformer.kt$GSlideTransformer$override fun transformPage(view: View, position: Float)</ID>
+    <ID>ClassOrdering:ImageSaver.kt$ImageSaver$@SuppressLint("RestrictedApi") @Throws(ImageUtil.CodecFailedException::class) private fun extractJpegBytes(image: ImageProxy)</ID>
+    <ID>ClassOrdering:ImageSaver.kt$ImageSaver$Companion</ID>
+    <ID>ClassOrdering:ImageSaver.kt$ImageSaver$override fun onCaptureSuccess(image: ImageProxy)</ID>
+    <ID>ClassOrdering:ImageSaver.kt$ImageSaver$private fun saveImage()</ID>
+    <ID>ClassOrdering:ImageSaver.kt$ImageSaver$private var skipErrorDialog = false</ID>
+    <ID>ClassOrdering:InAppGallery.kt$InAppGallery$Companion</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$// Used to request permission from the user private val locationPermissionLauncher = registerForActivityResult( RequestMultiplePermissions() ) { if (!application.shouldAskForLocationPermission()) { requestLocation() } else { camConfig.requireLocation = false } }</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$@Volatile var isStarted = false</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$Companion</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$fun cancelFocusTimer()</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$fun startFocusTimer()</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$lateinit var camConfig: CamConfig</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$lateinit var gestureDetectorCompat: GestureDetectorCompat</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$private lateinit var cameraControl: CameraControl</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$private lateinit var dialog: Dialog</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$private val dp32 by lazy { 32 * resources.displayMetrics.density }</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$private val enableLocationLauncher = registerForActivityResult( ActivityResultContracts.StartActivityForResult() ) { requestLocation(application.isAnyLocationProvideActive()) }</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$private var isQRDialogShowing = false</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$val requiresVideoModeOnly: Boolean get() { return this is VideoOnlyActivity || this is VideoCaptureActivity }</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$val sensorNotifier: SensorOrientationChangeNotifier? get() { return SensorOrientationChangeNotifier.getInstance(this) }</ID>
+    <ID>ClassOrdering:MainActivity.kt$MainActivity$var isThumbnailLoaded = false</ID>
+    <ID>ClassOrdering:MoreSettings.kt$MoreSettings$override fun onDestroy()</ID>
+    <ID>ClassOrdering:QRAnalyzer.kt$QRAnalyzer$Companion</ID>
+    <ID>ClassOrdering:QROverlay.kt$QROverlay$Companion</ID>
+    <ID>ClassOrdering:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier$Companion</ID>
+    <ID>ClassOrdering:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier$init { mSensorEventListener = NotifierSensorEventListener() mSensorManager = mainActivity.getSystemService(Context.SENSOR_SERVICE) as SensorManager }</ID>
+    <ID>ClassOrdering:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.Companion$fun clearInstance()</ID>
+    <ID>ClassOrdering:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.Companion$fun getInstance(mActivity: MainActivity): SensorOrientationChangeNotifier?</ID>
+    <ID>ClassOrdering:SettingsDialog.kt$SettingsDialog$init { setContentView(binding.root) dialog = binding.settingsDialog dialog.setOnClickListener {} moreSettingsButton = binding.moreSettings moreSettingsButton.setOnClickListener { if (!mActivity.videoCapturer.isRecording) { MoreSettings.start(mActivity) } else { mActivity.showMessage(getString(R.string.more_settings_unavailable_during_recording)) } } window?.setBackgroundDrawableResource(android.R.color.transparent) window?.setDimAmount(0f) setOnDismissListener { mActivity.settingsIcon.visibility = View.VISIBLE } val background: View = binding.background background.setOnClickListener { slideDialogUp() } val rootView = binding.root rootView.setOnInterceptTouchEventListener( object : SettingsFrameLayout.OnInterceptTouchEventListener { override fun onInterceptTouchEvent( view: SettingsFrameLayout?, ev: MotionEvent?, disallowIntercept: Boolean ): Boolean { return mActivity.gestureDetectorCompat.onTouchEvent(ev!!) } override fun onTouchEvent( view: SettingsFrameLayout?, event: MotionEvent? ): Boolean { return false } } ) settingsFrame = binding.settingsFrame rootView.viewTreeObserver.addOnPreDrawListener( object : OnPreDrawListener { override fun onPreDraw(): Boolean { rootView.viewTreeObserver.removeOnPreDrawListener(this) settingsFrame.layoutParams = (settingsFrame.layoutParams as ViewGroup.MarginLayoutParams).let { val marginTop = (mActivity.rootView.layoutParams as ViewGroup.MarginLayoutParams).topMargin it.height = (marginTop + (rootView.measuredWidth * 4 / 3)) it } return true } } ) locToggle = binding.locationToggle locToggle.setOnClickListener { if (mActivity.videoCapturer.isRecording) { locToggle.isChecked = !locToggle.isChecked mActivity.showMessage( getString(R.string.toggle_geo_tagging_unsupported_while_recording) ) } else { camConfig.requireLocation = locToggle.isChecked } } flashToggle = binding.flashToggleOption flashToggle.setOnClickListener { if (mActivity.requiresVideoModeOnly) { mActivity.showMessage( getString(R.string.flash_switch_unsupported) ) } else { camConfig.toggleFlashMode() } } aRToggle = binding.aspectRatioToggle aRToggle.setOnClickListener { if (camConfig.isVideoMode) { aRToggle.isChecked = true mActivity.showMessage( getString(R.string.four_by_three_unsupported_in_video) ) } else { camConfig.toggleAspectRatio() } } torchToggle = binding.torchToggleOption torchToggle.setOnClickListener { if (camConfig.isFlashAvailable) { camConfig.toggleTorchState() } else { torchToggle.isChecked = false mActivity.showMessage( getString(R.string.flash_unavailable_in_current_mode) ) } } gridToggle = binding.gridToggleOption gridToggle.setOnClickListener { camConfig.gridType = when (camConfig.gridType) { CamConfig.GridType.NONE -&gt; CamConfig.GridType.THREE_BY_THREE CamConfig.GridType.THREE_BY_THREE -&gt; CamConfig.GridType.FOUR_BY_FOUR CamConfig.GridType.FOUR_BY_FOUR -&gt; CamConfig.GridType.GOLDEN_RATIO CamConfig.GridType.GOLDEN_RATIO -&gt; CamConfig.GridType.NONE } updateGridToggleUI() } videoQualitySpinner = binding.videoQualitySpinner videoQualitySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener { override fun onItemSelected( p0: AdapterView&lt;*&gt;?, p1: View?, position: Int, p3: Long ) { val choice = vQAdapter.getItem(position) as String updateVideoQuality(choice) } override fun onNothingSelected(p0: AdapterView&lt;*&gt;?) {} } qRadio = binding.qualityRadio lRadio = binding.latencyRadio if (mActivity.requiresVideoModeOnly) { qRadio.isEnabled = false lRadio.isEnabled = false } cmRadioGroup = binding.cmRadioGroup cmRadioGroup.setOnCheckedChangeListener { _, _ -&gt; camConfig.emphasisQuality = qRadio.isChecked if (camConfig.cameraProvider != null) { camConfig.startCamera(true) } } selfIlluminationToggle = binding.selfIlluminationSwitch selfIlluminationToggle.setOnClickListener { camConfig.selfIlluminate = selfIlluminationToggle.isChecked } focusTimeoutSpinner = binding.focusTimeoutSpinner focusTimeoutSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener { override fun onItemSelected( p0: AdapterView&lt;*&gt;?, p1: View?, position: Int, p3: Long ) { val selectedOption = focusTimeoutSpinner.selectedItem.toString() updateFocusTimeout(selectedOption) } override fun onNothingSelected(p0: AdapterView&lt;*&gt;?) {} } focusTimeoutSpinner.setSelection(2) timerSpinner = binding.timerSpinner timerSpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener { override fun onItemSelected( p0: AdapterView&lt;*&gt;?, p1: View?, position: Int, p3: Long ) { val selectedOption = timerSpinner.selectedItem.toString() if (selectedOption == "Off") { mActivity.timerDuration = 0 mActivity.cbText.visibility = View.INVISIBLE } else { try { val durS = selectedOption.substring(0, selectedOption.length - 1) val dur = durS.toInt() mActivity.timerDuration = dur mActivity.cbText.text = selectedOption mActivity.cbText.visibility = View.VISIBLE } catch (exception: Exception) { mActivity.showMessage( getString(R.string.unexpected_error_while_setting_focus_timeout) ) } } } override fun onNothingSelected(p0: AdapterView&lt;*&gt;?) {} } mScrollView = binding.settingsScrollview mScrollViewContent = binding.settingsScrollviewContent includeAudioSetting = binding.includeAudioSetting enableEISSetting = binding.enableEisSetting selfIlluminationSetting = binding.selfIlluminationSetting videoQualitySetting = binding.videoQualitySetting timerSetting = binding.timerSetting includeAudioToggle = binding.includeAudioSwitch includeAudioToggle.setOnClickListener { camConfig.includeAudio = includeAudioToggle.isChecked } includeAudioToggle.setOnCheckedChangeListener { _, _ -&gt; camConfig.startCamera(true) } enableEISToggle = binding.enableEisSwitch enableEISToggle.setOnClickListener { camConfig.enableEIS = enableEISToggle.isChecked } enableEISToggle.setOnCheckedChangeListener { _, _ -&gt; camConfig.startCamera(true) } window?.setFlags( WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE, WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE ) }</ID>
+    <ID>ClassOrdering:SettingsDialog.kt$SettingsDialog$private val slideDownAnimation: Animation by lazy { val anim = AnimationUtils.loadAnimation( mActivity, R.anim.slide_down ) anim.setAnimationListener(object : Animation.AnimationListener { override fun onAnimationStart(p0: Animation?) {} override fun onAnimationEnd(p0: Animation?) { moreSettingsButton.visibility = View.VISIBLE } override fun onAnimationRepeat(p0: Animation?) {} }) anim }</ID>
+    <ID>ClassOrdering:SettingsDialog.kt$SettingsDialog$private val slideUpAnimation: Animation by lazy { val anim = AnimationUtils.loadAnimation( mActivity, R.anim.slide_up ) anim.setAnimationListener( object : Animation.AnimationListener { override fun onAnimationStart(p0: Animation?) { moreSettingsButton.visibility = View.GONE } override fun onAnimationEnd(p0: Animation?) { dismissHandler.removeCallbacks(dismissCallback) dismissHandler.post( dismissCallback ) } override fun onAnimationRepeat(p0: Animation?) {} } ) anim }</ID>
+    <ID>ClassOrdering:SettingsDialog.kt$SettingsDialog$private var wasSelfIlluminationOn = false</ID>
+    <ID>ClassOrdering:SettingsDialog.kt$SettingsDialog$val dismissCallback = Runnable { dismiss() }</ID>
+    <ID>ClassOrdering:SettingsDialog.kt$SettingsDialog$val dismissHandler = Handler(Looper.myLooper()!!)</ID>
+    <ID>ClassOrdering:SettingsFrameLayout.kt$SettingsFrameLayout$Companion</ID>
+    <ID>ClassOrdering:VideoCapturer.kt$VideoCapturer$private val dp16 = 16 * mActivity.resources.displayMetrics.density</ID>
+    <ID>ClassOrdering:VideoCapturer.kt$VideoCapturer$private val dp8 = 8 * mActivity.resources.displayMetrics.density</ID>
+    <ID>ClassOrdering:VideoPlayer.kt$VideoPlayer$Companion</ID>
+    <ID>ClassOrdering:ZoomBar.kt$ZoomBar$Companion</ID>
+    <ID>ClassOrdering:ZoomBar.kt$ZoomBar$constructor(context: Context) : super(context)</ID>
+    <ID>ClassOrdering:ZoomBar.kt$ZoomBar$constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)</ID>
+    <ID>ClassOrdering:ZoomBar.kt$ZoomBar$constructor(context: Context, attrs: AttributeSet?, defStyle: Int) : super( context, attrs, defStyle )</ID>
+    <ID>ClassOrdering:ZoomableImageView.kt$ZoomableImageView$private var isInZoomMode = false</ID>
+    <ID>CollapsibleIfStatements:CamConfig.kt$CamConfig$if (lensFacing == CameraSelector.LENS_FACING_FRONT) { if (!modePref.contains(SettingValues.Key.SELF_ILLUMINATION)) { putBoolean( SettingValues.Key.SELF_ILLUMINATION, SettingValues.Default.SELF_ILLUMINATION ) } }</ID>
+    <ID>CollapsibleIfStatements:InAppGallery.kt$InAppGallery$if (showVideosOnly) { if (item.type != ITEM_TYPE_VIDEO) { return@forEach } }</ID>
+    <ID>CollapsibleIfStatements:MainActivity.kt$MainActivity$if (!(this is VideoCaptureActivity &amp;&amp; thirdOption.visibility == View.VISIBLE)) { if (!isQRDialogShowing) { camConfig.initializeCamera(true) } }</ID>
+    <ID>CollapsibleIfStatements:MainActivity.kt$MainActivity$if (ContextCompat.checkSelfPermission( this, Manifest.permission.RECORD_AUDIO ) == PackageManager.PERMISSION_GRANTED ) { if (dialog.isShowing) { dialog.dismiss() } }</ID>
+    <ID>CollapsibleIfStatements:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$if (abs(fAngle - lastX) &lt; X_THRESHOLD) { if (zAngle in Z_ENTRY_MIN..Z_ENTRY_MAX) { if (abs(zAngle - lastZ) &lt; Z_THRESHOLD) { mainActivity.gCircleFrame.visibility = View.VISIBLE } } }</ID>
+    <ID>CollapsibleIfStatements:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$if (fAngle in X_ENTRY_MIN..X_ENTRY_MAX) { if (abs(fAngle - lastX) &lt; X_THRESHOLD) { if (zAngle in Z_ENTRY_MIN..Z_ENTRY_MAX) { if (abs(zAngle - lastZ) &lt; Z_THRESHOLD) { mainActivity.gCircleFrame.visibility = View.VISIBLE } } } }</ID>
+    <ID>CollapsibleIfStatements:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$if (zAngle in Z_ENTRY_MIN..Z_ENTRY_MAX) { if (abs(zAngle - lastZ) &lt; Z_THRESHOLD) { mainActivity.gCircleFrame.visibility = View.VISIBLE } }</ID>
+    <ID>CollapsibleIfStatements:SharedPrefs.kt$EphemeralSharedPrefs.Editor$if (cleared) { // see onSharedPreferenceChanged() doc if (prefs.targetSdk &gt;= Build.VERSION_CODES.R) { listeners.forEach { it.onSharedPreferenceChanged(prefs, null) } } }</ID>
+    <ID>CommentSpacing:BitmapUtils.kt$//this will eventually be removed</ID>
+    <ID>CommentSpacing:ExifHelper.kt$//fun clearExif(context: Context, uri : Uri) {</ID>
+    <ID>CommentSpacing:ExifHelper.kt$//}</ID>
+    <ID>ComplexCondition:ZoomableImageView.kt$ZoomableImageView$oldMeasuredHeight == viewWidth &amp;&amp; oldMeasuredHeight == viewHeight || viewWidth == 0 || viewHeight == 0</ID>
+    <ID>CyclomaticComplexMethod:CamConfig.kt$CamConfig$fun loadSettings()</ID>
+    <ID>CyclomaticComplexMethod:CamConfig.kt$CamConfig$fun startCamera(forced: Boolean = false)</ID>
+    <ID>CyclomaticComplexMethod:CapturedItems.kt$CapturedItems$private fun migratePreviousUris(ctx: Context, camConfig: CamConfig, joinedUris: String, editor: SharedPreferences.Editor, currentTreeUri: Uri?)</ID>
+    <ID>CyclomaticComplexMethod:MainActivity.kt$MainActivity$@SuppressLint("ClickableViewAccessibility") override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>CyclomaticComplexMethod:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$override fun onSensorChanged(event: SensorEvent)</ID>
+    <ID>CyclomaticComplexMethod:VideoCapturer.kt$VideoCapturer$fun startRecording()</ID>
+    <ID>EmptyCatchBlock:QRAnalyzer.kt$QRAnalyzer${ }</ID>
+    <ID>EmptyFunctionBlock:ActivityLifeCycleHelper.kt$ActivityLifeCycleHelper${}</ID>
+    <ID>EmptyFunctionBlock:App.kt$App.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:CamConfig.kt$CamConfig.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:ImageCapturer.kt$ImageCapturer.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:MainActivity.kt$MainActivity${}</ID>
+    <ID>EmptyFunctionBlock:MainActivity.kt$MainActivity.&lt;no name provided&gt;${}</ID>
+    <ID>EmptyFunctionBlock:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener${}</ID>
+    <ID>EmptyFunctionBlock:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;${}</ID>
+    <ID>ExpressionBodySyntax:BottomTabLayout.kt$BottomTabLayout$return getTabAt(selectedTabPosition)</ID>
+    <ID>ExpressionBodySyntax:CamConfig.kt$CamConfig$return !(isQRMode || isVideoMode)</ID>
+    <ID>ExpressionBodySyntax:CamConfig.kt$CamConfig$return camera?.cameraInfo?.torchState?.value == TorchState.ON</ID>
+    <ID>ExpressionBodySyntax:CamConfig.kt$CamConfig$return imageCapture != null</ID>
+    <ID>ExpressionBodySyntax:CamConfig.kt$CamConfig$return isInPhotoMode &amp;&amp; gSuggestions</ID>
+    <ID>ExpressionBodySyntax:CamConfig.kt$CamConfig$return mActivity is CaptureActivity</ID>
+    <ID>ExpressionBodySyntax:CamConfig.kt$CamConfig$return mActivity.settingsDialog.enableEISToggle.isChecked</ID>
+    <ID>ExpressionBodySyntax:CamConfig.kt$CamConfig$return mActivity.settingsDialog.includeAudioToggle.isChecked</ID>
+    <ID>ExpressionBodySyntax:CamConfig.kt$CamConfig$return mActivity.settingsDialog.locToggle.isChecked</ID>
+    <ID>ExpressionBodySyntax:CaptureActivity.kt$CaptureActivity$return ::outputUri.isInitialized</ID>
+    <ID>ExpressionBodySyntax:CapturedItems.kt$CapturedItem$return dateString.hashCode()</ID>
+    <ID>ExpressionBodySyntax:GallerySliderAdapter.kt$GallerySliderAdapter$return GallerySlide(GallerySlideBinding.inflate(layoutInflater, parent, false))</ID>
+    <ID>ExpressionBodySyntax:GallerySliderAdapter.kt$GallerySliderAdapter$return items.size</ID>
+    <ID>ExpressionBodySyntax:GallerySliderAdapter.kt$GallerySliderAdapter$return items[gActivity.gallerySlider.currentItem]</ID>
+    <ID>ExpressionBodySyntax:GallerySliderAdapter.kt$GallerySliderAdapter$return items[position].hashCode().toLong()</ID>
+    <ID>ExpressionBodySyntax:ImageSaver.kt$ImageSaver$return IMAGE_NAME_PREFIX + dateString() + imageFileFormat</ID>
+    <ID>ExpressionBodySyntax:InAppGallery.kt$InAppGallery$return gallerySliderAdapter!!.getCurrentItem()</ID>
+    <ID>ExpressionBodySyntax:IntentUtils.kt$return IntentCompat.getParcelableArrayListExtra(intent, name, T::class.java)</ID>
+    <ID>ExpressionBodySyntax:IntentUtils.kt$return IntentCompat.getParcelableExtra(intent, name, T::class.java)</ID>
+    <ID>ExpressionBodySyntax:MainActivity.kt$MainActivity$return SensorOrientationChangeNotifier.getInstance(this)</ID>
+    <ID>ExpressionBodySyntax:MainActivity.kt$MainActivity$return false</ID>
+    <ID>ExpressionBodySyntax:MainActivity.kt$MainActivity$return this is VideoOnlyActivity || this is VideoCaptureActivity</ID>
+    <ID>ExpressionBodySyntax:MainActivity.kt$MainActivity$return true</ID>
+    <ID>ExpressionBodySyntax:NumInputFilter.kt$NumInputFilter$return value in min..max</ID>
+    <ID>ExpressionBodySyntax:SecureCaptureActivity.kt$SecureCaptureActivity$return ephemeralPrefsNamespace.getPrefs(this, name, mode, cloneOriginal = true)</ID>
+    <ID>ExpressionBodySyntax:SecureMainActivity.kt$SecureMainActivity$return ephemeralPrefsNamespace.getPrefs(this, name, mode, cloneOriginal = true)</ID>
+    <ID>ExpressionBodySyntax:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$return false</ID>
+    <ID>ExpressionBodySyntax:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$return mActivity.gestureDetectorCompat.onTouchEvent(ev!!)</ID>
+    <ID>ExpressionBodySyntax:SettingsFrameLayout.kt$SettingsFrameLayout.DummyInterceptTouchEventListener$return false</ID>
+    <ID>ExpressionBodySyntax:TunePlayer.kt$TunePlayer$return !context.camConfig.enableCameraSounds</ID>
+    <ID>ExpressionBodySyntax:VideoCapturer.kt$VideoCapturer$return String.format("%1$" + 2 + "s", time).replace(' ', '0')</ID>
+    <ID>Filename:ImageDecoderUtils.kt$app.grapheneos.camera.util.ImageDecoderUtils.kt</ID>
+    <ID>FinalNewline:GSlideTransformer.kt$app.grapheneos.camera.GSlideTransformer.kt</ID>
+    <ID>FinalNewline:SettingsFrameLayout.kt$app.grapheneos.camera.ui.SettingsFrameLayout.kt</ID>
+    <ID>FinalNewline:SystemSettingsObserver.kt$app.grapheneos.camera.ktx.SystemSettingsObserver.kt</ID>
+    <ID>FinalNewline:VideoCaptureActivity.kt$app.grapheneos.camera.ui.activities.VideoCaptureActivity.kt</ID>
+    <ID>FinalNewline:VideoOnlyActivity.kt$app.grapheneos.camera.ui.activities.VideoOnlyActivity.kt</ID>
+    <ID>ForbiddenComment:ExifHelper.kt$// TODO: (Re-)use this code later to implement custom EXIF removal setting</ID>
+    <ID>ForbiddenComment:VideoCapturer.kt$VideoCapturer$// TODO: Uncomment this once the main indicator UI gets implemented</ID>
+    <ID>FunctionReturnTypeSpacing:CamConfig.kt$CamConfig$private fun isLensFacingSupported(lensFacing : Int) : Boolean</ID>
+    <ID>FunctionStartOfBodySpacing:SharedPrefs.kt$EphemeralSharedPrefs$override fun getAll(): MutableMap&lt;String, *&gt;</ID>
+    <ID>ImplicitDefaultLocale:InAppGallery.kt$InAppGallery$String.format( "%.2f", (size / (1000f * 1000f)) )</ID>
+    <ID>ImplicitDefaultLocale:ZoomBar.kt$ZoomBar$String.format("%.1fx", zoomRatio)</ID>
+    <ID>ImportOrdering:ExifHelper.kt$import androidxc.exifinterface.media.ExifInterface import java.util.TimeZone import java.text.SimpleDateFormat import java.util.Date import java.util.Locale</ID>
+    <ID>ImportOrdering:SettingsFrameLayout.kt$import android.annotation.SuppressLint import android.content.Context import android.util.AttributeSet import android.widget.FrameLayout import android.view.MotionEvent</ID>
+    <ID>ImportOrdering:SharedPrefs.kt$import android.annotation.SuppressLint import android.content.Context import android.content.SharedPreferences import android.os.Build import android.util.ArrayMap import java.util.WeakHashMap import android.content.SharedPreferences.OnSharedPreferenceChangeListener as ChangeListener</ID>
+    <ID>ImportOrdering:ZoomableImageView.kt$import android.content.Context import android.graphics.Matrix import android.view.ScaleGestureDetector import android.view.MotionEvent import android.graphics.PointF import android.util.AttributeSet import android.view.ScaleGestureDetector.SimpleOnScaleGestureListener import androidx.appcompat.widget.AppCompatImageView import app.grapheneos.camera.R import app.grapheneos.camera.ui.activities.InAppGallery import kotlin.math.abs</ID>
+    <ID>Indentation:App.kt$App$ </ID>
+    <ID>Indentation:CamConfig.kt$CamConfig$ </ID>
+    <ID>Indentation:CapturedItems.kt$CapturedItems$ </ID>
+    <ID>Indentation:ExposureBar.kt$ExposureBar$ </ID>
+    <ID>Indentation:ImageCapturer.kt$ImageCapturer$ </ID>
+    <ID>Indentation:ImageSaver.kt$ImageSaver$ </ID>
+    <ID>Indentation:MainActivity.kt$MainActivity$ </ID>
+    <ID>Indentation:MainActivity.kt$MainActivity.&lt;no name provided&gt;$ </ID>
+    <ID>Indentation:SettingsDialog.kt$SettingsDialog$ </ID>
+    <ID>Indentation:ZoomableImageView.kt$ZoomableImageView$ </ID>
+    <ID>LargeClass:CamConfig.kt$CamConfig</ID>
+    <ID>LargeClass:MainActivity.kt$MainActivity : AppCompatActivityOnTouchListenerOnScaleGestureListenerOnGestureListenerOnDoubleTapListenerListener</ID>
+    <ID>LongMethod:BlurBitmap.kt$BlurBitmap$operator fun get(oBitmap: Bitmap): Bitmap</ID>
+    <ID>LongMethod:CamConfig.kt$CamConfig$fun loadSettings()</ID>
+    <ID>LongMethod:CamConfig.kt$CamConfig$fun startCamera(forced: Boolean = false)</ID>
+    <ID>LongMethod:GallerySliderAdapter.kt$GallerySliderAdapter$override fun onBindViewHolder(holder: GallerySlide, position: Int)</ID>
+    <ID>LongMethod:InAppGallery.kt$InAppGallery$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:InAppGallery.kt$InAppGallery$private fun showCurrentMediaDetails()</ID>
+    <ID>LongMethod:MainActivity.kt$MainActivity$@SuppressLint("ClickableViewAccessibility") override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:MainActivity.kt$MainActivity$fun onScanResultSuccess(rawText: String)</ID>
+    <ID>LongMethod:MoreSettings.kt$MoreSettings$override fun onCreate(savedInstanceState: Bundle?)</ID>
+    <ID>LongMethod:QRAnalyzer.kt$QRAnalyzer$override fun analyze(image: ImageProxy)</ID>
+    <ID>LongMethod:SettingsDialog.kt$SettingsDialog$fun selfIllumination()</ID>
+    <ID>LongMethod:VideoCapturer.kt$VideoCapturer$fun startRecording()</ID>
+    <ID>LongParameterList:ImageSaver.kt$ImageSaver$( val imageCapturer: ImageCapturer, val appContext: Context, val jpegQuality: Int, val storageLocation: String, val imageFileFormat: String, val imageCaptureMetadata: ImageCapture.Metadata, val removeExifAfterCapture: Boolean, @Px val targetThumbnailWidth: Int, @Px val targetThumbnailHeight: Int, )</ID>
+    <ID>MagicNumber:App.kt$App$1000</ID>
+    <ID>MagicNumber:App.kt$App$10f</ID>
+    <ID>MagicNumber:App.kt$App$2000</ID>
+    <ID>MagicNumber:App.kt$App$5</ID>
+    <ID>MagicNumber:App.kt$App$60</ID>
+    <ID>MagicNumber:BlurBitmap.kt$BlurBitmap$0.1f</ID>
+    <ID>MagicNumber:BlurBitmap.kt$BlurBitmap$0x0000ff</ID>
+    <ID>MagicNumber:BlurBitmap.kt$BlurBitmap$0x00ff00</ID>
+    <ID>MagicNumber:BlurBitmap.kt$BlurBitmap$0xff0000</ID>
+    <ID>MagicNumber:BlurBitmap.kt$BlurBitmap$16</ID>
+    <ID>MagicNumber:BlurBitmap.kt$BlurBitmap$256</ID>
+    <ID>MagicNumber:BlurBitmap.kt$BlurBitmap$3</ID>
+    <ID>MagicNumber:BlurBitmap.kt$BlurBitmap$4</ID>
+    <ID>MagicNumber:BlurBitmap.kt$BlurBitmap$8</ID>
+    <ID>MagicNumber:CamConfig.kt$CamConfig$0.8f</ID>
+    <ID>MagicNumber:CamConfig.kt$CamConfig$5L</ID>
+    <ID>MagicNumber:CamConfig.kt$CamConfig$960</ID>
+    <ID>MagicNumber:CaptureActivity.kt$CaptureActivity$10</ID>
+    <ID>MagicNumber:CaptureActivity.kt$CaptureActivity$100</ID>
+    <ID>MagicNumber:CaptureActivity.kt$CaptureActivity$1000000</ID>
+    <ID>MagicNumber:CaptureActivity.kt$CaptureActivity$2000</ID>
+    <ID>MagicNumber:CaptureActivity.kt$CaptureActivity$300</ID>
+    <ID>MagicNumber:CountDownTimerUI.kt$CountDownTimerUI$3</ID>
+    <ID>MagicNumber:CountDownTimerUI.kt$CountDownTimerUI$4</ID>
+    <ID>MagicNumber:CountDownTimerUI.kt$CountDownTimerUI.&lt;no name provided&gt;$1000</ID>
+    <ID>MagicNumber:CountDownTimerUI.kt$CountDownTimerUI.&lt;no name provided&gt;$1000L</ID>
+    <ID>MagicNumber:CustomGrid.kt$CustomGrid$16</ID>
+    <ID>MagicNumber:CustomGrid.kt$CustomGrid$255</ID>
+    <ID>MagicNumber:CustomGrid.kt$CustomGrid$3</ID>
+    <ID>MagicNumber:CustomGrid.kt$CustomGrid$3f</ID>
+    <ID>MagicNumber:CustomGrid.kt$CustomGrid$4</ID>
+    <ID>MagicNumber:CustomGrid.kt$CustomGrid$4f</ID>
+    <ID>MagicNumber:CustomGrid.kt$CustomGrid$8f</ID>
+    <ID>MagicNumber:CustomGrid.kt$CustomGrid$9</ID>
+    <ID>MagicNumber:ExifHelper.kt$1000</ID>
+    <ID>MagicNumber:ExifHelper.kt$60</ID>
+    <ID>MagicNumber:ExposureBar.kt$ExposureBar$300</ID>
+    <ID>MagicNumber:ExposureBar.kt$ExposureBar$90f</ID>
+    <ID>MagicNumber:GallerySliderAdapter.kt$ImageDownscaler$4500</ID>
+    <ID>MagicNumber:ImageCapturer.kt$ImageCapturer$0.6f</ID>
+    <ID>MagicNumber:ImageCapturer.kt$ImageCapturer$0.8f</ID>
+    <ID>MagicNumber:ImageCapturer.kt$ImageCapturer$200</ID>
+    <ID>MagicNumber:ImageSaver.kt$ImageSaver$100</ID>
+    <ID>MagicNumber:ImageSaver.kt$ImageSaver$1000</ID>
+    <ID>MagicNumber:ImageSaver.kt$ImageSaver$1024</ID>
+    <ID>MagicNumber:ImageSaver.kt$ImageSaver$10_000</ID>
+    <ID>MagicNumber:InAppGallery.kt$InAppGallery$1000f</ID>
+    <ID>MagicNumber:InAppGallery.kt$InAppGallery$300</ID>
+    <ID>MagicNumber:InAppGallery.kt$InAppGallery$50</ID>
+    <ID>MagicNumber:InAppGallery.kt$InAppGallery$500</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$0.05f</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$0.5f</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$0xFF</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$10</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$134</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$135</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$16</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$180</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$180f</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$224</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$225</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$270</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$270f</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$3</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$300</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$314</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$32</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$360</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$360f</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$4</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$400</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$45</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$50</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$500</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$60</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$7</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$8</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$800</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$90</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity$90f</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity.&lt;no name provided&gt;$10</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity.&lt;no name provided&gt;$16</ID>
+    <ID>MagicNumber:MainActivity.kt$MainActivity.&lt;no name provided&gt;$9</ID>
+    <ID>MagicNumber:PackageManagerUtils.kt$33</ID>
+    <ID>MagicNumber:PreviewView.kt$16.0</ID>
+    <ID>MagicNumber:PreviewView.kt$3.0</ID>
+    <ID>MagicNumber:PreviewView.kt$4.0</ID>
+    <ID>MagicNumber:PreviewView.kt$9.0</ID>
+    <ID>MagicNumber:QRAnalyzer.kt$QRAnalyzer$10</ID>
+    <ID>MagicNumber:QRAnalyzer.kt$QRAnalyzer$180</ID>
+    <ID>MagicNumber:QRAnalyzer.kt$QRAnalyzer$1_000_000_000</ID>
+    <ID>MagicNumber:QROverlay.kt$QROverlay$0Xffffff</ID>
+    <ID>MagicNumber:QROverlay.kt$QROverlay$4f</ID>
+    <ID>MagicNumber:QROverlay.kt$QROverlay$8f</ID>
+    <ID>MagicNumber:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier$3</ID>
+    <ID>MagicNumber:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$180</ID>
+    <ID>MagicNumber:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$270</ID>
+    <ID>MagicNumber:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$270f</ID>
+    <ID>MagicNumber:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$5</ID>
+    <ID>MagicNumber:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$90</ID>
+    <ID>MagicNumber:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$90f</ID>
+    <ID>MagicNumber:SettingsDialog.kt$SettingsDialog$255f</ID>
+    <ID>MagicNumber:SettingsDialog.kt$SettingsDialog$300</ID>
+    <ID>MagicNumber:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$3</ID>
+    <ID>MagicNumber:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$4</ID>
+    <ID>MagicNumber:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$8</ID>
+    <ID>MagicNumber:TunePlayer.kt$TunePlayer$10</ID>
+    <ID>MagicNumber:Utils.kt$1000</ID>
+    <ID>MagicNumber:Utils.kt$3</ID>
+    <ID>MagicNumber:VideoCapturer.kt$VideoCapturer$1000</ID>
+    <ID>MagicNumber:VideoCapturer.kt$VideoCapturer$16</ID>
+    <ID>MagicNumber:VideoCapturer.kt$VideoCapturer$300</ID>
+    <ID>MagicNumber:VideoCapturer.kt$VideoCapturer$3600</ID>
+    <ID>MagicNumber:VideoCapturer.kt$VideoCapturer$60</ID>
+    <ID>MagicNumber:VideoCapturer.kt$VideoCapturer$8</ID>
+    <ID>MagicNumber:ZoomBar.kt$ZoomBar$100</ID>
+    <ID>MagicNumber:ZoomBar.kt$ZoomBar$100f</ID>
+    <ID>MagicNumber:ZoomBar.kt$ZoomBar$300</ID>
+    <ID>MagicNumber:ZoomBar.kt$ZoomBar$90f</ID>
+    <ID>MagicNumber:ZoomableImageView.kt$ZoomableImageView$3f</ID>
+    <ID>MagicNumber:ZoomableImageView.kt$ZoomableImageView$9</ID>
+    <ID>MatchingDeclarationName:ImageDecoderUtils.kt$ImageResizer : OnHeaderDecodedListener</ID>
+    <ID>MaxLineLength:CapturedItems.kt$CapturedItems$private</ID>
+    <ID>MaxLineLength:CapturedItems.kt$CapturedItems$val columns = arrayOf(DocumentsContract.Document.COLUMN_DOCUMENT_ID, DocumentsContract.Document.COLUMN_DISPLAY_NAME)</ID>
+    <ID>MaxLineLength:MainActivity.kt$MainActivity$if (cameraPermissionDialog != null &amp;&amp; cameraPermissionDialog!!.isShowing) cameraPermissionDialog!!.cancel()</ID>
+    <ID>MaxLineLength:SharedPrefs.kt$EphemeralSharedPrefs$override</ID>
+    <ID>MaxLineLength:SharedPrefs.kt$fun</ID>
+    <ID>MaximumLineLength:CapturedItems.kt$CapturedItems$ </ID>
+    <ID>MaximumLineLength:MainActivity.kt$MainActivity$ </ID>
+    <ID>MaximumLineLength:SharedPrefs.kt$EphemeralSharedPrefs$ </ID>
+    <ID>MaximumLineLength:SharedPrefs.kt$fun</ID>
+    <ID>MultiLineIfElse:BottomTabLayout.kt$BottomTabLayout$smoothScrollTo(targetScrollX, 0)</ID>
+    <ID>MultiLineIfElse:CamConfig.kt$CamConfig$CameraSelector.LENS_FACING_BACK</ID>
+    <ID>MultiLineIfElse:CamConfig.kt$CamConfig$CameraSelector.LENS_FACING_FRONT</ID>
+    <ID>MultiLineIfElse:CamConfig.kt$CamConfig$SettingValues.Default.FLASH_MODE</ID>
+    <ID>MultiLineIfElse:CamConfig.kt$CamConfig$imageCapture!!.flashMode</ID>
+    <ID>MultiLineIfElse:CameraControl.kt$CameraControl$1f</ID>
+    <ID>MultiLineIfElse:CameraControl.kt$CameraControl$newZoomRatio</ID>
+    <ID>MultiLineIfElse:CameraControl.kt$CameraControl$zoomState.maxZoomRatio</ID>
+    <ID>MultiLineIfElse:CameraControl.kt$CameraControl$zoomState.minZoomRatio</ID>
+    <ID>MultiLineIfElse:CaptureActivity.kt$CaptureActivity$return image</ID>
+    <ID>MultiLineIfElse:CapturedItems.kt$CapturedItem$IMAGE_NAME_PREFIX</ID>
+    <ID>MultiLineIfElse:ExifHelper.kt$hoursStrRep = "+${hoursStrRep}"</ID>
+    <ID>MultiLineIfElse:MainActivity.kt$MainActivity$return</ID>
+    <ID>MultiLineIfElse:MainActivity.kt$MainActivity$return false</ID>
+    <ID>MultiLineIfElse:MainActivity.kt$MainActivity$return true</ID>
+    <ID>MultiLineIfElse:MainActivity.kt$MainActivity$settingsDialog.show()</ID>
+    <ID>MultiLineIfElse:MainActivity.kt$MainActivity$view.rotation = -90f</ID>
+    <ID>MultiLineIfElse:MainActivity.kt$MainActivity$view.rotation = 360f</ID>
+    <ID>MultiLineIfElse:MainActivity.kt$MainActivity.&lt;no name provided&gt;$displayCutout.boundingRects.first()</ID>
+    <ID>MultiLineIfElse:MainActivity.kt$MainActivity.&lt;no name provided&gt;$null</ID>
+    <ID>MultiLineIfElse:MoreSettings.kt$MoreSettings$false</ID>
+    <ID>MultiLineIfElse:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier$deadLinksArr.add(wr)</ID>
+    <ID>MultiLineIfElse:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier$mListeners.add(WeakReference(listener))</ID>
+    <ID>MultiLineIfElse:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier$wr.get()!! .onOrientationChange(mOrientation)</ID>
+    <ID>MultiLineIfElse:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$newOrientation = 0</ID>
+    <ID>MultiLineIfElse:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$newOrientation = 180</ID>
+    <ID>MultiLineIfElse:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$newOrientation = 90</ID>
+    <ID>MultiLineIfElse:SettingsDialog.kt$SettingsDialog$enableEISSetting.visibility = View.VISIBLE</ID>
+    <ID>MultiLineIfElse:ZoomableImageView.kt$ZoomableImageView$delta</ID>
+    <ID>MultiLineIfElse:ZoomableImageView.kt$ZoomableImageView$return</ID>
+    <ID>MultiLineIfElse:ZoomableImageView.kt$ZoomableImageView.ScaleListener$mMatrix.postScale( mScaleFactor, mScaleFactor, detector.focusX, detector.focusY )</ID>
+    <ID>MultiLineIfElse:ZoomableImageView.kt$ZoomableImageView.ScaleListener$mMatrix.postScale( mScaleFactor, mScaleFactor, viewWidth / 2f, viewHeight / 2f )</ID>
+    <ID>NestedBlockDepth:BottomTabLayout.kt$BottomTabLayout$override fun onScrollChanged(x: Int, y: Int, oldX: Int, oldY: Int)</ID>
+    <ID>NestedBlockDepth:CamConfig.kt$CamConfig$fun startCamera(forced: Boolean = false)</ID>
+    <ID>NestedBlockDepth:CapturedItems.kt$CapturedItems$private fun collectMediaStoreItems(resolver: ContentResolver, volumeName: String, dest: ArrayList&lt;CapturedItem&gt;)</ID>
+    <ID>NestedBlockDepth:CapturedItems.kt$CapturedItems$private fun collectSafItems(resolver: ContentResolver, treeUri: Uri, dest: ArrayList&lt;CapturedItem&gt;)</ID>
+    <ID>NestedBlockDepth:CapturedItems.kt$CapturedItems$private fun migratePreviousUris(ctx: Context, camConfig: CamConfig, joinedUris: String, editor: SharedPreferences.Editor, currentTreeUri: Uri?)</ID>
+    <ID>NestedBlockDepth:InAppGallery.kt$InAppGallery$private fun showCurrentMediaDetails()</ID>
+    <ID>NestedBlockDepth:MainActivity.kt$MainActivity$override fun onFling( e1: MotionEvent?, e2: MotionEvent, velocityX: Float, velocityY: Float ): Boolean</ID>
+    <ID>NestedBlockDepth:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$override fun onSensorChanged(event: SensorEvent)</ID>
+    <ID>NewLineAtEndOfFile:GSlideTransformer.kt$app.grapheneos.camera.GSlideTransformer.kt</ID>
+    <ID>NewLineAtEndOfFile:SettingsFrameLayout.kt$app.grapheneos.camera.ui.SettingsFrameLayout.kt</ID>
+    <ID>NewLineAtEndOfFile:SystemSettingsObserver.kt$app.grapheneos.camera.ktx.SystemSettingsObserver.kt</ID>
+    <ID>NewLineAtEndOfFile:VideoCaptureActivity.kt$app.grapheneos.camera.ui.activities.VideoCaptureActivity.kt</ID>
+    <ID>NewLineAtEndOfFile:VideoOnlyActivity.kt$app.grapheneos.camera.ui.activities.VideoOnlyActivity.kt</ID>
+    <ID>NoBlankLineBeforeRbrace:BottomTabLayout.kt$BottomTabLayout$ </ID>
+    <ID>NoBlankLineBeforeRbrace:CamConfig.kt$CamConfig$ </ID>
+    <ID>NoBlankLineBeforeRbrace:CamConfig.kt$CamConfig.&lt;no name provided&gt;$ </ID>
+    <ID>NoBlankLineBeforeRbrace:CameraControl.kt$CameraControl$ </ID>
+    <ID>NoBlankLineBeforeRbrace:CaptureActivity.kt$CaptureActivity$ </ID>
+    <ID>NoBlankLineBeforeRbrace:CountDownTimerUI.kt$CountDownTimerUI.&lt;no name provided&gt;$ </ID>
+    <ID>NoBlankLineBeforeRbrace:CustomGrid.kt$CustomGrid$ </ID>
+    <ID>NoBlankLineBeforeRbrace:ImageCapturer.kt$ImageCapturer.&lt;no name provided&gt;$ </ID>
+    <ID>NoBlankLineBeforeRbrace:InAppGallery.kt$InAppGallery$ </ID>
+    <ID>NoBlankLineBeforeRbrace:MainActivity.kt$MainActivity$ </ID>
+    <ID>NoBlankLineBeforeRbrace:MainActivity.kt$MainActivity.&lt;no name provided&gt;$ </ID>
+    <ID>NoBlankLineBeforeRbrace:MoreSettings.kt$MoreSettings$ </ID>
+    <ID>NoBlankLineBeforeRbrace:QROverlay.kt$QROverlay$ </ID>
+    <ID>NoBlankLineBeforeRbrace:SettingsDialog.kt$SettingsDialog$ </ID>
+    <ID>NoBlankLineBeforeRbrace:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$ </ID>
+    <ID>NoBlankLineBeforeRbrace:SystemSettingsObserver.kt$SystemSettingsObserver$ </ID>
+    <ID>NoBlankLineBeforeRbrace:VideoCaptureActivity.kt$VideoCaptureActivity$ </ID>
+    <ID>NoBlankLineBeforeRbrace:VideoOnlyActivity.kt$VideoOnlyActivity$ </ID>
+    <ID>NoBlankLineBeforeRbrace:ZoomBar.kt$ZoomBar$ </ID>
+    <ID>NoConsecutiveBlankLines:CamConfig.kt$CamConfig$ </ID>
+    <ID>NoConsecutiveBlankLines:ExifHelper.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:InAppGallery.kt$InAppGallery$ </ID>
+    <ID>NoConsecutiveBlankLines:MainActivity.kt$MainActivity$ </ID>
+    <ID>NoConsecutiveBlankLines:MoreSettings.kt$MoreSettings$ </ID>
+    <ID>NoConsecutiveBlankLines:SensorOrientationChangeNotifier.kt$ </ID>
+    <ID>NoConsecutiveBlankLines:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.Companion$ </ID>
+    <ID>NoConsecutiveBlankLines:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$ </ID>
+    <ID>NoConsecutiveBlankLines:SettingsDialog.kt$SettingsDialog$ </ID>
+    <ID>NoConsecutiveBlankLines:VideoPlayer.kt$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:BlurBitmap.kt$BlurBitmap$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:BottomTabLayout.kt$BottomTabLayout$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:CamConfig.kt$CamConfig$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:CaptureActivity.kt$CaptureActivity$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:CountDownTimerUI.kt$CountDownTimerUI$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:CustomGrid.kt$CustomGrid$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:ImageCapturer.kt$ImageCapturer$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:InAppGallery.kt$InAppGallery$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:InAppGallery.kt$InAppGallery.Companion$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:MainActivity.kt$MainActivity$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:MainActivity.kt$MainActivity.&lt;no name provided&gt;$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:MoreSettings.kt$MoreSettings$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:SettingsDialog.kt$SettingsDialog$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:VideoCaptureActivity.kt$VideoCaptureActivity$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:VideoCapturer.kt$VideoCapturer$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:ZoomBar.kt$ZoomBar$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:ZoomableImageView.kt$ZoomableImageView$ </ID>
+    <ID>NoEmptyFirstLineInMethodBlock:ZoomableImageView.kt$ZoomableImageView.ScaleListener$ </ID>
+    <ID>NoMultipleSpaces:GallerySliderAdapter.kt$GallerySliderAdapter$ </ID>
+    <ID>NoMultipleSpaces:SharedPrefs.kt$EphemeralSharedPrefs$ </ID>
+    <ID>NoSemicolons:QrTile.kt$QrTile.&lt;no name provided&gt;$;</ID>
+    <ID>NoSemicolons:Utils.kt$;</ID>
+    <ID>NoUnusedImports:InAppGallery.kt$app.grapheneos.camera.ui.activities.InAppGallery.kt</ID>
+    <ID>NoUnusedImports:IntentUtils.kt$app.grapheneos.camera.util.IntentUtils.kt</ID>
+    <ID>NoUnusedImports:MainActivity.kt$app.grapheneos.camera.ui.activities.MainActivity.kt</ID>
+    <ID>NoUnusedImports:TunePlayer.kt$app.grapheneos.camera.TunePlayer.kt</ID>
+    <ID>ParameterListWrapping:BottomTabLayout.kt$BottomTabLayout$( context: Context, attrs: AttributeSet? = null )</ID>
+    <ID>ParameterListWrapping:CountDownTimerUI.kt$CountDownTimerUI$( context: Context, attrs: AttributeSet? = null )</ID>
+    <ID>ParameterListWrapping:GallerySliderAdapter.kt$ImageDownscaler$(decoder: ImageDecoder, info: ImageDecoder.ImageInfo, source: ImageDecoder.Source)</ID>
+    <ID>ParameterListWrapping:QRToggle.kt$QRToggle$( context: Context, attrs: AttributeSet? = null )</ID>
+    <ID>ParameterListWrapping:SettingsFrameLayout.kt$SettingsFrameLayout$( context: Context, attrs: AttributeSet? = null )</ID>
+    <ID>ParameterListWrapping:SharedPrefs.kt$(commit: Boolean = false, action: SharedPreferences.Editor.() -&gt; Unit)</ID>
+    <ID>ParameterListWrapping:ZoomableImageView.kt$ZoomableImageView$( context: Context, attrs: AttributeSet? = null )</ID>
+    <ID>PrintStackTrace:MainActivity.kt$MainActivity$exception</ID>
+    <ID>PrintStackTrace:NumInputFilter.kt$NumInputFilter$e</ID>
+    <ID>PropertyWrapping:CapturedItems.kt$CapturedItems$val columns = arrayOf(DocumentsContract.Document.COLUMN_DOCUMENT_ID, DocumentsContract.Document.COLUMN_DISPLAY_NAME)</ID>
+    <ID>ReturnCount:App.kt$App$fun isAnyLocationProvideActive(): Boolean</ID>
+    <ID>ReturnCount:CamConfig.kt$CamConfig$fun startCamera(forced: Boolean = false)</ID>
+    <ID>ReturnCount:CapturedItems.kt$CapturedItems$fun parseCapturedItem(fileName: String, uri: Uri): CapturedItem?</ID>
+    <ID>ReturnCount:ImageCapturer.kt$ImageCapturer$@SuppressLint("RestrictedApi") fun takePicture()</ID>
+    <ID>ReturnCount:MainActivity.kt$MainActivity$override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean</ID>
+    <ID>ReturnCount:MainActivity.kt$MainActivity$override fun onTouch(v: View, event: MotionEvent): Boolean</ID>
+    <ID>ReturnCount:MainActivity.kt$MainActivity$private fun onSwipeLeft()</ID>
+    <ID>ReturnCount:MainActivity.kt$MainActivity$private fun onSwipeRight()</ID>
+    <ID>ReturnCount:SensorOrientationChangeNotifier.kt$SensorOrientationChangeNotifier.NotifierSensorEventListener$override fun onSensorChanged(event: SensorEvent)</ID>
+    <ID>ReturnCount:Utils.kt$fun storageLocationToUiString(ctx: Context, sl: String): String</ID>
+    <ID>ReturnCount:VideoCapturer.kt$VideoCapturer$fun startRecording()</ID>
+    <ID>ReturnCount:VideoCapturer.kt$VideoCapturer$private fun createRecordingContext(recorder: Recorder, fileName: String): RecordingContext?</ID>
+    <ID>SpacingAroundColon:CamConfig.kt$CamConfig$:</ID>
+    <ID>SpacingAroundColon:CapturedItems.kt$CapturedItem$:</ID>
+    <ID>SpacingAroundComma:InAppGallery.kt$InAppGallery$,</ID>
+    <ID>SpacingAroundComma:MainActivity.kt$MainActivity$,</ID>
+    <ID>SpacingAroundComma:VideoCapturer.kt$VideoCapturer$,</ID>
+    <ID>SpacingAroundCurly:CapturedItems.kt$CapturedItems${</ID>
+    <ID>SpacingAroundCurly:ImageSaver.kt$ImageSaver${</ID>
+    <ID>SpacingAroundCurly:ImageSaver.kt$ImageSaver$}</ID>
+    <ID>SpacingAroundCurly:MainActivity.kt$MainActivity${</ID>
+    <ID>SpacingAroundCurly:SettingsDialog.kt$SettingsDialog${</ID>
+    <ID>SpacingBetweenDeclarationsWithComments:SharedPrefs.kt$EphemeralSharedPrefs$// match the "weakly referenced listeners" behavior of the regular SharedPreferences,</ID>
+    <ID>SpacingBetweenPackageAndImports:SensorOrientationChangeNotifier.kt$ </ID>
+    <ID>SpacingBetweenPackageAndImports:VideoPlayer.kt$ </ID>
+    <ID>StringShouldBeRawString:ImageCapturer.kt$ImageCapturer$"osVersion: ${Build.FINGERPRINT}" + "\npackage: $pkgName:$pkgVersion" + "\n\n${exception.printStackTraceToString()}"</ID>
+    <ID>StringTemplate:ExifHelper.kt$${hoursStrRep}</ID>
+    <ID>SwallowedException:CamConfig.kt$CamConfig$e: ExecutionException</ID>
+    <ID>SwallowedException:CamConfig.kt$CamConfig$exception: IllegalArgumentException</ID>
+    <ID>SwallowedException:CaptureActivity.kt$CaptureActivity$e: Exception</ID>
+    <ID>SwallowedException:GallerySliderAdapter.kt$GallerySliderAdapter$e: Exception</ID>
+    <ID>SwallowedException:MoreSettings.kt$MoreSettings$exception: Exception</ID>
+    <ID>SwallowedException:QRAnalyzer.kt$QRAnalyzer$e: ReaderException</ID>
+    <ID>SwallowedException:SettingsDialog.kt$SettingsDialog$exception: Exception</ID>
+    <ID>SwallowedException:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$exception: Exception</ID>
+    <ID>SwallowedException:VideoCapturer.kt$VideoCapturer$e: Exception</ID>
+    <ID>SwallowedException:VideoCapturer.kt$VideoCapturer$exception: Exception</ID>
+    <ID>ThrowsCount:ImageSaver.kt$ImageSaver$@Throws(ImageSaverException::class) private fun saveImageInner()</ID>
+    <ID>TooGenericExceptionCaught:CaptureActivity.kt$CaptureActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:CapturedItems.kt$CapturedItems$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:GallerySliderAdapter.kt$GallerySliderAdapter$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:ImageSaver.kt$ImageSaver$deleteException: Exception</ID>
+    <ID>TooGenericExceptionCaught:ImageSaver.kt$ImageSaver$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:InAppGallery.kt$InAppGallery$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MainActivity.kt$MainActivity$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:MainActivity.kt$MainActivity$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:MoreSettings.kt$MoreSettings$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:SettingsDialog.kt$SettingsDialog$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:VideoCapturer.kt$VideoCapturer$e: Exception</ID>
+    <ID>TooGenericExceptionCaught:VideoCapturer.kt$VideoCapturer$exception: Exception</ID>
+    <ID>TooGenericExceptionCaught:VideoPlayer.kt$VideoPlayer$e: Exception</ID>
+    <ID>TooManyFunctions:App.kt$App : Application</ID>
+    <ID>TooManyFunctions:CamConfig.kt$CamConfig</ID>
+    <ID>TooManyFunctions:CapturedItems.kt$CapturedItems</ID>
+    <ID>TooManyFunctions:ImageSaver.kt$ImageSaver : OnImageCapturedCallback</ID>
+    <ID>TooManyFunctions:InAppGallery.kt$InAppGallery : AppCompatActivity</ID>
+    <ID>TooManyFunctions:MainActivity.kt$MainActivity : AppCompatActivityOnTouchListenerOnScaleGestureListenerOnGestureListenerOnDoubleTapListenerListener</ID>
+    <ID>TooManyFunctions:SettingsDialog.kt$SettingsDialog : Dialog</ID>
+    <ID>TooManyFunctions:SharedPrefs.kt$EphemeralSharedPrefs : SharedPreferences</ID>
+    <ID>TooManyFunctions:SharedPrefs.kt$EphemeralSharedPrefs$Editor : Editor</ID>
+    <ID>TopLevelPropertyNaming:ImageCapturer.kt$private const val imageFileFormat = ".jpg"</ID>
+    <ID>UnderscoresInNumericLiterals:CaptureActivity.kt$CaptureActivity$1000000</ID>
+    <ID>UnnecessaryParentheses:CamConfig.kt$CamConfig$(!forced &amp;&amp; camera != null)</ID>
+    <ID>UnnecessaryParentheses:CapturedItems.kt$CapturedItems$(ch &gt;= '0' &amp;&amp; ch &lt;= '9')</ID>
+    <ID>UnnecessaryParentheses:CountDownTimerUI.kt$CountDownTimerUI.&lt;no name provided&gt;$(pendingMs / 1000)</ID>
+    <ID>UnnecessaryParentheses:ExifHelper.kt$(millis / (1000 * 60))</ID>
+    <ID>UnnecessaryParentheses:ExifHelper.kt$(totalMins / 60)</ID>
+    <ID>UnnecessaryParentheses:GSlideTransformer.kt$GSlideTransformer$(MIN_SCALE + (1 - MIN_SCALE) * (1 - abs(position)))</ID>
+    <ID>UnnecessaryParentheses:ImageSaver.kt$ImageSaver$(100 * 1024)</ID>
+    <ID>UnnecessaryParentheses:InAppGallery.kt$InAppGallery$(size / (1000f * 1000f))</ID>
+    <ID>UnnecessaryParentheses:MainActivity.kt$MainActivity$(16 * resources.displayMetrics.density.toInt())</ID>
+    <ID>UnnecessaryParentheses:MainActivity.kt$MainActivity$(8 * resources.displayMetrics.density.toInt())</ID>
+    <ID>UnnecessaryParentheses:MainActivity.kt$MainActivity$(lzAngle / 60)</ID>
+    <ID>UnnecessaryParentheses:MainActivity.kt$MainActivity.&lt;no name provided&gt;$(settingsIcon.layoutParams as RelativeLayout.LayoutParams)</ID>
+    <ID>UnnecessaryParentheses:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$(marginTop + (rootView.measuredWidth * 4 / 3))</ID>
+    <ID>UnnecessaryParentheses:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$(rootView.measuredWidth * 4 / 3)</ID>
+    <ID>UnnecessaryParentheses:SettingsDialog.kt$SettingsDialog.&lt;no name provided&gt;$(sdHM * 8)</ID>
+    <ID>UnusedImports:InAppGallery.kt$import android.app.Activity</ID>
+    <ID>UnusedImports:InAppGallery.kt$import androidx.activity.result.contract.ActivityResultContracts.StartActivityForResult</ID>
+    <ID>UnusedImports:InAppGallery.kt$import java.io.FileNotFoundException</ID>
+    <ID>UnusedImports:IntentUtils.kt$import android.os.Build</ID>
+    <ID>UnusedImports:MainActivity.kt$import android.database.ContentObserver</ID>
+    <ID>UnusedImports:TunePlayer.kt$import android.os.SystemClock</ID>
+    <ID>UseCheckOrError:ImageSaver.kt$ImageSaver$throw IllegalStateException("unknown imageFormat $imageFormat")</ID>
+    <ID>UseDataClass:VideoCapturer.kt$VideoCapturer$RecordingContext</ID>
+    <ID>Wrapping:CamConfig.kt$CamConfig$(</ID>
+    <ID>Wrapping:CamConfig.kt$CamConfig$[</ID>
+    <ID>Wrapping:CapturedItems.kt$CapturedItems$(</ID>
+    <ID>Wrapping:ExposureBar.kt$ExposureBar$(</ID>
+    <ID>Wrapping:GallerySliderAdapter.kt$ImageDownscaler$(</ID>
+    <ID>Wrapping:ImageCapturer.kt$ImageCapturer$(</ID>
+    <ID>Wrapping:ImageSaver.kt$ImageSaver$(</ID>
+    <ID>Wrapping:InAppGallery.kt$InAppGallery$(</ID>
+    <ID>Wrapping:InAppGallery.kt$InAppGallery.Companion$( if (offset == null) { "yyyy:MM:dd HH:mm:ss" } else { "yyyy:MM:dd HH:mm:ss Z" }, Locale.US )</ID>
+    <ID>Wrapping:MainActivity.kt$MainActivity$(</ID>
+    <ID>Wrapping:MainActivity.kt$MainActivity$(this, object : SimpleOnGestureListener() { override fun onDoubleTap(e: MotionEvent): Boolean { Log.i(TAG, "===============Double tap detected.=========") // val zoomState = config.camera!!.cameraInfo.zoomState.value // if (zoomState != null) { // val start = zoomState.linearZoom // var end = start * 1.5f // if (end &lt; 0.25f) end = 0.25f else if (end &gt; zoomState.maxZoomRatio) end = // zoomState.maxZoomRatio // val animator = ValueAnimator.ofFloat(start, end) // animator.duration = 300 // animator.addUpdateListener { valueAnimator: ValueAnimator -&gt; // config.camera!!.cameraControl.setLinearZoom( // valueAnimator.animatedValue as Float // ) // } // animator.start() // } return super.onDoubleTap(e) } })</ID>
+    <ID>Wrapping:MainActivity.kt$MainActivity$AppCompatActivity(), OnTouchListener, OnScaleGestureListener, GestureDetector.OnGestureListener, GestureDetector.OnDoubleTapListener, SensorOrientationChangeNotifier.Listener</ID>
+    <ID>Wrapping:MoreSettings.kt$MoreSettings$(</ID>
+    <ID>Wrapping:NumInputFilter.kt$NumInputFilter$(</ID>
+    <ID>Wrapping:QRToggle.kt$QRToggle$(</ID>
+    <ID>Wrapping:SettingsDialog.kt$SettingsDialog$(</ID>
+    <ID>Wrapping:SharedPrefs.kt$(</ID>
+    <ID>Wrapping:ZoomableImageView.kt$ZoomableImageView$( transY, viewHeight.toFloat(), origHeight * saveScale )</ID>
+  </CurrentIssues>
+</SmellBaseline>
