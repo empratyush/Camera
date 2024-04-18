@@ -12,6 +12,16 @@ plugins {
     id("com.android.application")
     kotlin("android")
     kotlin("kapt")
+    id("io.gitlab.arturbosch.detekt") version "1.23.6"
+}
+
+detekt {
+    buildUponDefaultConfig = true
+    allRules = false
+    baseline = file("$projectDir/baseline-detekt.xml")
+    config.setFrom("$projectDir/base-detekt.yml")
+    config.setFrom("$projectDir/formatter-detekt.yml")
+    config.setFrom("$projectDir/style-detekt.yml")
 }
 
 java {
@@ -108,4 +118,5 @@ dependencies {
     implementation("androidx.camera:camera-extensions:$cameraVersion")
 
     implementation("com.google.zxing:core:3.5.3")
+    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.6")
 }

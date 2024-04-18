@@ -1,0 +1,55 @@
+build:
+  maxIssues: 0
+  excludeCorrectable: false
+
+config:
+  validation: true
+  warningsAsErrors: true
+  checkExhaustiveness: true
+
+processors:
+  active: true
+
+console-reports:
+  active: true
+
+output-reports:
+  active: true
+
+comments:
+  active: true
+
+potential-bugs:
+  active: true
+
+naming:
+  active: true
+
+performance:
+  active: true
+
+empty-blocks:
+  active: true
+
+complexity:
+  active: true
+  ReplaceSafeCallChainWithRun:
+    active: true
+  NestedScopeFunctions:
+    active: false
+  StringLiteralDuplication:
+    active: true
+
+coroutines:
+  active: true
+  GlobalCoroutineUsage:
+    active: true
+  SuspendFunSwallowedCancellation:
+    active: true
+  SuspendFunWithCoroutineScopeReceiver:
+    active: true
+
+exceptions:
+  active: true
+  NotImplementedDeclaration:
+    active: true

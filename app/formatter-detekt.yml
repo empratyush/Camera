@@ -1,0 +1,65 @@
+formatting:
+  active: true
+  android: false
+  autoCorrect: true
+  BinaryExpressionWrapping:
+    active: false
+    autoCorrect: true
+    maxLineLength: 120
+    indentSize: 4
+  ChainMethodContinuation:
+    active: false
+    autoCorrect: true
+    indentSize: 4
+    maxLineLength: 120
+  ClassName:
+    active: false
+  ClassSignature:
+    active: false
+    autoCorrect: true
+    indentSize: 4
+    maxLineLength: 120
+  ConditionWrapping:
+    active: false
+    autoCorrect: true
+    indentSize: 4
+  ContextReceiverMapping:
+    active: true
+    autoCorrect: true
+    maxLineLength: 120
+    indentSize: 4
+  DiscouragedCommentLocation:
+    active: true
+  EnumWrapping:
+    active: true
+    autoCorrect: true
+    indentSize: 4
+  FunctionExpressionBody:
+    active: false
+    autoCorrect: true
+    indentSize: 4
+    maxLineLength: 120
+  FunctionLiteral:
+    active: false
+    autoCorrect: true
+    indentSize: 4
+    maxLineLength: 120
+  FunctionName:
+    active: false
+  FunctionTypeModifierSpacing:
+    active: false
+    autoCorrect: true
+  MixedConditionOperators:
+    active: false
+  MultilineLoop:
+    active: false
+    autoCorrect: true
+    indentSize: 4
+  TrailingCommaOnCallSite:
+    active: false
+    autoCorrect: true
+    useTrailingCommaOnCallSite: true
+  TrailingCommaOnDeclarationSite:
+    active: false
+    autoCorrect: true
+    useTrailingCommaOnDeclarationSite: true
