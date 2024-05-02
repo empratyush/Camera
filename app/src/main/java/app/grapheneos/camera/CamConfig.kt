@@ -4,12 +4,15 @@ import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
 import android.content.SharedPreferences
+import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraMetadata
 import android.hardware.camera2.CaptureRequest
+import android.media.CamcorderProfile
 import android.net.Uri
 import android.os.Build
 import android.provider.MediaStore
 import android.util.Log
+import android.util.Range
 import android.util.Size
 import android.view.MotionEvent
 import android.view.View
@@ -17,8 +20,11 @@ import android.view.animation.AlphaAnimation
 import android.view.animation.Animation
 import android.view.animation.LinearInterpolator
 import android.widget.Button
+import androidx.annotation.OptIn
 import androidx.annotation.StringRes
+import androidx.camera.camera2.interop.Camera2CameraInfo
 import androidx.camera.camera2.interop.Camera2Interop
+import androidx.camera.camera2.interop.ExperimentalCamera2Interop
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.Camera
 import androidx.camera.core.CameraSelector
@@ -41,6 +47,7 @@ import androidx.core.content.ContextCompat
 import app.grapheneos.camera.analyzer.QRAnalyzer
 import app.grapheneos.camera.ktx.markAs16by9Layout
 import app.grapheneos.camera.ktx.markAs4by3Layout
+import app.grapheneos.camera.ui.SettingsDialog
 import app.grapheneos.camera.ui.activities.CaptureActivity
 import app.grapheneos.camera.ui.activities.MainActivity
 import app.grapheneos.camera.ui.activities.MoreSettings
@@ -52,6 +59,19 @@ import app.grapheneos.camera.util.edit
 import com.google.zxing.BarcodeFormat
 import java.util.concurrent.ExecutionException
 import java.util.concurrent.Executors
+import org.json.JSONObject
+
+fun Quality.fromCameraxQualityToCamcorderQuality(): Int {
+    return when (this) {
+        Quality.UHD -> CamcorderProfile.QUALITY_2160P
+        Quality.FHD -> CamcorderProfile.QUALITY_1080P
+        Quality.HD -> CamcorderProfile.QUALITY_720P
+        Quality.SD -> CamcorderProfile.QUALITY_480P
+        Quality.HIGHEST -> CamcorderProfile.QUALITY_HIGH
+        Quality.LOWEST -> CamcorderProfile.QUALITY_LOW
+        else -> throw IllegalStateException("unknown/unhandled camerax quality")
+    }
+}
 
 // note that enum constant name is used as a name of a SharedPreferences instance
 enum class CameraMode(val extensionMode: Int, val uiName: Int) {
@@ -88,6 +108,7 @@ class CamConfig(private val mActivity: MainActivity) {
             const val ASPECT_RATIO = "aspect_ratio"
             const val INCLUDE_AUDIO = "include_audio"
             const val ENABLE_EIS = "enable_eis"
+            const val HIGHER_FPS = "enable_fps"
             const val SCAN = "scan"
             const val SCAN_ALL_CODES = "scan_all_codes"
             const val SAVE_IMAGE_AS_PREVIEW = "save_image_as_preview"
@@ -111,6 +132,8 @@ class CamConfig(private val mActivity: MainActivity) {
 
             // const val IMAGE_FILE_FORMAT = "image_quality"
             // const val VIDEO_FILE_FORMAT = "video_quality"
+
+            const val FRAME_RATE = "frame_rate"
         }
 
         object Default {
@@ -135,6 +158,8 @@ class CamConfig(private val mActivity: MainActivity) {
             const val INCLUDE_AUDIO = true
 
             const val ENABLE_EIS = true
+
+            const val HIGHER_FPS = true
 
             const val SCAN_ALL_CODES = false
 
@@ -308,6 +333,32 @@ class CamConfig(private val mActivity: MainActivity) {
             editor.putInt(SettingValues.Key.GRID, GridType.values().indexOf(value))
             editor.apply()
 
+            field = value
+        }
+
+    var frameRates : SettingsDialog.FrameRates = SettingsDialog.FrameRates.Default
+        get() {
+            val key = "${videoQuality.toFrameRateKey()}"
+            if (modePref.contains(SettingValues.Key.FRAME_RATE)) {
+                val stored = JSONObject(modePref.getString(SettingValues.Key.FRAME_RATE, "")!!)
+                if (stored.has(key)) {
+                    return SettingsDialog.FrameRates.valueOf(stored.getString(key))
+                }
+            }
+            return SettingsDialog.FrameRates.Default
+        }
+        set(value) {
+
+            val values = if (modePref.contains(SettingValues.Key.FRAME_RATE)){
+                JSONObject(modePref.getString(SettingValues.Key.FRAME_RATE, "")!!)
+            } else {
+                JSONObject()
+            }
+
+            values.put("${videoQuality.toFrameRateKey()}", value.name)
+            modePref.edit {
+                putString(SettingValues.Key.FRAME_RATE, values.toString())
+            }
             field = value
         }
 
@@ -672,6 +723,7 @@ class CamConfig(private val mActivity: MainActivity) {
 
             if (isVideoMode) {
                 mActivity.settingsDialog.reloadQualities()
+                mActivity.settingsDialog.reloadFrameRates()
             }
 
             if (lensFacing == CameraSelector.LENS_FACING_FRONT) {
@@ -745,6 +797,13 @@ class CamConfig(private val mActivity: MainActivity) {
             editor.putBoolean(
                 SettingValues.Key.ENABLE_EIS,
                 SettingValues.Default.ENABLE_EIS
+            )
+        }
+
+        if (!commonPref.contains(SettingValues.Key.HIGHER_FPS)) {
+            editor.putBoolean(
+                SettingValues.Key.HIGHER_FPS,
+                SettingValues.Default.HIGHER_FPS
             )
         }
 
@@ -1053,12 +1112,17 @@ class CamConfig(private val mActivity: MainActivity) {
                         View.VISIBLE
                     }
 
-                videoCapture =
-                    VideoCapture.withOutput(
-                        Recorder.Builder()
-                            .setQualitySelector(QualitySelector.from(videoQuality))
-                            .build()
-                    )
+                val videoRecorderBuilder = VideoCapture.Builder(
+                    Recorder.Builder()
+                        .setAspectRatio(aspectRatio)
+                        .setQualitySelector(QualitySelector.from(videoQuality))
+                        .build()
+                )
+                if (!frameRates.isDefault()) {
+                    Camera2Interop.Extender(videoRecorderBuilder).setFrameRate()
+                    videoRecorderBuilder.setTargetFrameRate(frameRates.range)
+                }
+                videoCapture = videoRecorderBuilder.build()
 
                 useCaseGroupBuilder.addUseCase(videoCapture!!)
             }
@@ -1121,6 +1185,10 @@ class CamConfig(private val mActivity: MainActivity) {
                 CaptureRequest.CONTROL_VIDEO_STABILIZATION_MODE,
                 CameraMetadata.CONTROL_VIDEO_STABILIZATION_MODE_OFF
             )
+        }
+
+        if (isVideoMode && !frameRates.isDefault()) {
+            Camera2Interop.Extender(previewBuilder).setFrameRate()
         }
 
         preview = previewBuilder.build().also {
@@ -1192,6 +1260,19 @@ class CamConfig(private val mActivity: MainActivity) {
         } else {
             mActivity.gCircleFrame.visibility = View.GONE
         }
+    }
+
+    private fun Quality.toFrameRateKey(): Int {
+        return fromCameraxQualityToCamcorderQuality()
+    }
+
+    @SuppressLint("RestrictedApi")
+    @OptIn(ExperimentalCamera2Interop::class)
+    private fun <T> Camera2Interop.Extender<T>.setFrameRate() {
+        setCaptureRequestOption(
+            CaptureRequest.CONTROL_AE_TARGET_FPS_RANGE,
+            frameRates.range
+        )
     }
 
     fun snapPreview() {

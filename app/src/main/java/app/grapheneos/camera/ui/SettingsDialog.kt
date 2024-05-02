@@ -6,10 +6,13 @@ import android.app.Dialog
 import android.graphics.Color
 import android.hardware.camera2.CameraCharacteristics
 import android.hardware.camera2.CameraMetadata
+import android.media.CamcorderProfile
+import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
 import android.util.Log
+import android.util.Range
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
@@ -27,20 +30,25 @@ import android.widget.RadioGroup
 import android.widget.ScrollView
 import android.widget.Spinner
 import android.widget.ToggleButton
+import androidx.annotation.OptIn
 import androidx.annotation.StringRes
 import androidx.appcompat.widget.SwitchCompat
 import androidx.camera.camera2.interop.Camera2CameraInfo
+import androidx.camera.camera2.interop.ExperimentalCamera2Interop
 import androidx.camera.core.AspectRatio
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.DynamicRange
 import androidx.camera.core.ImageCapture
 import androidx.camera.video.Quality
 import androidx.camera.video.Recorder
+import androidx.core.view.isVisible
 import app.grapheneos.camera.CamConfig
 import app.grapheneos.camera.R
 import app.grapheneos.camera.databinding.SettingsBinding
+import app.grapheneos.camera.fromCameraxQualityToCamcorderQuality
 import app.grapheneos.camera.ui.activities.MainActivity
 import app.grapheneos.camera.ui.activities.MoreSettings
+import java.lang.NullPointerException
 import java.util.Collections
 
 class SettingsDialog(val mActivity: MainActivity) :
@@ -68,6 +76,8 @@ class SettingsDialog(val mActivity: MainActivity) :
 
     var includeAudioToggle: SwitchCompat
     var enableEISToggle: SwitchCompat
+    var frameRateSpinner: Spinner
+    private lateinit var frameRateAdapter: ArrayAdapter<FrameRates>
 
     var selfIlluminationToggle: SwitchCompat
 
@@ -338,6 +348,27 @@ class SettingsDialog(val mActivity: MainActivity) :
             camConfig.startCamera(true)
         }
 
+        frameRateSpinner = binding.frameRateSpinner
+        frameRateSpinner.apply {
+            onItemSelectedListener =
+                object : AdapterView.OnItemSelectedListener {
+                    override fun onItemSelected(
+                        p0: AdapterView<*>?,
+                        p1: View?,
+                        position: Int,
+                        p3: Long
+                    ) {
+                        val choice = frameRateAdapter.getItem(position) ?: return
+                        if (choice == camConfig.frameRates) return
+
+                        camConfig.frameRates = choice
+                        camConfig.startCamera(true)
+                    }
+
+                    override fun onNothingSelected(p0: AdapterView<*>?) {}
+                }
+        }
+
         window?.setFlags(
             WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
             WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
@@ -372,10 +403,12 @@ class SettingsDialog(val mActivity: MainActivity) :
             includeAudioSetting.visibility = View.VISIBLE
             enableEISSetting.visibility = View.GONE
             for (mode in Camera2CameraInfo.from(camConfig.camera!!.cameraInfo)
-                .getCameraCharacteristic(CameraCharacteristics
-                    .CONTROL_AVAILABLE_VIDEO_STABILIZATION_MODES)!!){
-                        if (mode == CameraMetadata.CONTROL_VIDEO_STABILIZATION_MODE_ON)
-                            enableEISSetting.visibility = View.VISIBLE
+                .getCameraCharacteristic(
+                    CameraCharacteristics
+                        .CONTROL_AVAILABLE_VIDEO_STABILIZATION_MODES
+                )!!) {
+                if (mode == CameraMetadata.CONTROL_VIDEO_STABILIZATION_MODE_ON)
+                    enableEISSetting.visibility = View.VISIBLE
             }
             videoQualitySetting.visibility = View.VISIBLE
         } else {
@@ -686,9 +719,77 @@ class SettingsDialog(val mActivity: MainActivity) :
         updateGridToggleUI()
 
         mActivity.settingsIcon.visibility = View.INVISIBLE
+        // CamcorderProfile getAll and VideoProfile getFrameRate is available in android s plus
+        binding.highFpsVideo.isVisible =
+            Build.VERSION.SDK_INT >= Build.VERSION_CODES.S && camConfig.isVideoMode
         super.show()
 
         slideDialogDown()
+    }
+
+    enum class FrameRates(private val uiName: String, val range: Range<Int>) {
+        ThirtyFps("30 FPS", Range(30, 30)),
+        SixtyFps("60 FPS", Range(60, 60)),
+        Default("Default", Range(-1, -1));
+
+        fun isDefault() = this == Default
+
+        override fun toString(): String {
+            return uiName
+        }
+    }
+
+    @OptIn(ExperimentalCamera2Interop::class)
+    fun getSupportedFrameForCurrentResolution(): Set<FrameRates> {
+        val defaultValue = setOf(FrameRates.Default)
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.S) return defaultValue
+
+        val camera = camConfig.camera ?: return defaultValue
+        val videoQuality = camConfig.videoQuality
+
+        val cameraInfo = camera.cameraInfo
+        val camera2Info = Camera2CameraInfo.from(cameraInfo)
+        val camcorderQuality = videoQuality.fromCameraxQualityToCamcorderQuality()
+
+        if (!CamcorderProfile.hasProfile(camcorderQuality)) {
+            return defaultValue
+        }
+
+//        val frameRate = CamcorderProfile.getAll(
+//            camera2Info.cameraId,
+//            camcorderQuality
+//        )?.videoProfiles?.firstOrNull()?.frameRate ?: return defaultValue
+
+        val profiles = CamcorderProfile.getAll(camera2Info.cameraId, camcorderQuality)?.videoProfiles
+        if (profiles.isNullOrEmpty()) return defaultValue
+
+        val frameRate = profiles.toTypedArray().reduce { acc, videoProfile ->
+            if (acc.frameRate > videoProfile.frameRate) acc else videoProfile
+        }?.frameRate ?: return defaultValue
+
+
+        return when (frameRate) {
+            60 -> setOf(FrameRates.Default, FrameRates.ThirtyFps, FrameRates.SixtyFps)
+            30 -> setOf(FrameRates.Default, FrameRates.ThirtyFps)
+            else -> setOf(FrameRates.Default)
+        }
+    }
+
+    @OptIn(ExperimentalCamera2Interop::class)
+    fun reloadFrameRates() {
+        val supportedFrameRates = getSupportedFrameForCurrentResolution()
+        frameRateAdapter = ArrayAdapter(
+            mActivity,
+            android.R.layout.simple_spinner_dropdown_item,
+            supportedFrameRates.toTypedArray()
+        )
+        frameRateSpinner.adapter = frameRateAdapter
+        try {
+            val selection = frameRateAdapter.getPosition(camConfig.frameRates)
+            frameRateSpinner.setSelection(selection)
+        } catch (ignored: NullPointerException) {
+            //ignored
+        }
     }
 
     fun reloadQualities() {
